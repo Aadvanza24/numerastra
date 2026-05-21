@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra horizontal lockup
+  Astra Orbit mark + Crimson Text wordmark with italic-gold "stra"
+  Use for headers, footers, OG images.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="Numerastra">
+  <defs>
+    <radialGradient id="lockupGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A24A"/>
+      <stop offset="100%" stop-color="#B8873A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ====== MARK (left, scaled to 140px in the 160 height frame) ====== -->
+  <g transform="translate(10, 10) scale(0.7)">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#B8873A" stroke-width="1.7" opacity="0.55"/>
+    <g fill="#B8873A" opacity="0.85">
+      <circle cx="100.0" cy="8.0" r="3.0"/>
+      <circle cx="159.1" cy="29.5" r="3.0"/>
+      <circle cx="190.6" cy="84.0" r="3.0"/>
+      <circle cx="179.7" cy="146.0" r="3.0"/>
+      <circle cx="131.5" cy="186.5" r="3.0"/>
+      <circle cx="68.5" cy="186.5" r="3.0"/>
+      <circle cx="20.3" cy="146.0" r="3.0"/>
+      <circle cx="9.4" cy="84.0" r="3.0"/>
+      <circle cx="40.9" cy="29.5" r="3.0"/>
+    </g>
+    <circle cx="100" cy="100" r="68" fill="none" stroke="#B8873A" stroke-width="1.0" opacity="0.35"/>
+    <g fill="none" stroke="#B8873A" stroke-width="2.6" stroke-linecap="round">
+      <line x1="100" y1="100" x2="100.0" y2="32.0"/>
+      <line x1="100" y1="100" x2="143.7" y2="47.9"/>
+      <line x1="100" y1="100" x2="167.0" y2="88.2"/>
+      <line x1="100" y1="100" x2="158.9" y2="134.0"/>
+      <line x1="100" y1="100" x2="123.3" y2="163.9"/>
+      <line x1="100" y1="100" x2="76.7" y2="163.9"/>
+      <line x1="100" y1="100" x2="41.1" y2="134.0"/>
+      <line x1="100" y1="100" x2="33.0" y2="88.2"/>
+      <line x1="100" y1="100" x2="56.3" y2="47.9"/>
+    </g>
+    <g fill="none" stroke="#D97830" stroke-width="1.9" stroke-linecap="round" opacity="0.85">
+      <line x1="100" y1="100" x2="117.1" y2="53.0"/>
+      <line x1="100" y1="100" x2="143.3" y2="75.0"/>
+      <line x1="100" y1="100" x2="149.2" y2="108.7"/>
+      <line x1="100" y1="100" x2="132.1" y2="138.3"/>
+      <line x1="100" y1="100" x2="100.0" y2="150.0"/>
+      <line x1="100" y1="100" x2="67.9" y2="138.3"/>
+      <line x1="100" y1="100" x2="50.8" y2="108.7"/>
+      <line x1="100" y1="100" x2="56.7" y2="75.0"/>
+      <line x1="100" y1="100" x2="82.9" y2="53.0"/>
+    </g>
+    <circle cx="100" cy="100" r="22" fill="#F7F1E3" stroke="#B8873A" stroke-width="2.4"/>
+    <circle cx="100" cy="100" r="9.5" fill="url(#lockupGold)"/>
+    <circle cx="100" cy="100" r="2.2" fill="#7A5A20"/>
+  </g>
+
+  <!-- ====== WORDMARK (right) ====== -->
+  <text x="180" y="105" font-family="'Crimson Text', 'Times New Roman', Georgia, serif"
+        font-weight="600" font-size="64" fill="#2B2319" letter-spacing="-1">Numera<tspan
+        font-style="italic" fill="#B8873A">stra</tspan></text>
+
+  <!-- Subtle tagline -->
+  <text x="180" y="135" font-family="'DM Sans', system-ui, sans-serif"
+        font-size="13" fill="#5C4E38" letter-spacing="2">VEDIC NUMEROLOGY · SINCE 2026</text>
+</svg>

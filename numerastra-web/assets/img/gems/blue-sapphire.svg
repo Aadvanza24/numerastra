@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra gemstone — Blue Sapphire (Neelam)
+  Style: stylised faceted oval, palette-locked, transparent BG.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Blue Sapphire (Neelam)">
+  <defs>
+    <radialGradient id="g-blue-sapphire" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#4A7BC8"/>
+      <stop offset="60%" stop-color="#2A4D8A"/>
+      <stop offset="100%" stop-color="#0F2348"/>
+    </radialGradient>
+    <linearGradient id="s-blue-sapphire" x1="30%" y1="20%" x2="60%" y2="50%">
+      <stop offset="0%" stop-color="#D5DCEA" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D5DCEA" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Drop shadow ellipse -->
+  <ellipse cx="100" cy="160" rx="62" ry="6" fill="#7A5A20" opacity="0.18"/>
+
+  <!-- Main oval body -->
+  <ellipse cx="100" cy="100" rx="68" ry="48" fill="url(#g-blue-sapphire)" stroke="#0F2348" stroke-width="1.5"/>
+
+  <!-- Facet lines -->
+  <g fill="none" stroke="#0F2348" stroke-width="1" opacity="0.55">
+    <line x1="100" y1="52" x2="60" y2="85"/>
+    <line x1="100" y1="52" x2="140" y2="85"/>
+    <line x1="100" y1="52" x2="100" y2="100"/>
+    <line x1="60" y1="85" x2="100" y2="100"/>
+    <line x1="140" y1="85" x2="100" y2="100"/>
+    <line x1="60" y1="115" x2="100" y2="100"/>
+    <line x1="140" y1="115" x2="100" y2="100"/>
+    <line x1="100" y1="148" x2="100" y2="100"/>
+    <line x1="100" y1="148" x2="60" y2="115"/>
+    <line x1="100" y1="148" x2="140" y2="115"/>
+    <line x1="32" y1="100" x2="60" y2="85"/>
+    <line x1="32" y1="100" x2="60" y2="115"/>
+    <line x1="168" y1="100" x2="140" y2="85"/>
+    <line x1="168" y1="100" x2="140" y2="115"/>
+  </g>
+
+  <!-- Specular highlight upper-left -->
+  <ellipse cx="78" cy="78" rx="22" ry="14" fill="url(#s-blue-sapphire)" opacity="0.7" transform="rotate(-25 78 78)"/>
+</svg>

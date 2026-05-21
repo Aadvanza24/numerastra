@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/checkout-success.html
+Disallow: /pages/results.html
+Disallow: /api/
+Disallow: /assets/js/
+
+# Allow major bots full access (no crawl delay)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://numerastra.com/sitemap.xml

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra favicon — bolder simplified Astra Orbit
+  Optimised for 16px-48px display.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Numerastra">
+  <!-- Cream background disc -->
+  <circle cx="32" cy="32" r="30" fill="#F7F1E3"/>
+
+  <!-- Bold outer ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#B8873A" stroke-width="2.5"/>
+
+  <!-- 8 simplified rays — alternate gold/saffron, thicker -->
+  <g stroke-linecap="round">
+    <!-- 4 long gold rays at cardinal angles -->
+    <g stroke="#B8873A" stroke-width="3">
+      <line x1="32" y1="32" x2="32" y2="9"/>
+      <line x1="32" y1="32" x2="55" y2="32"/>
+      <line x1="32" y1="32" x2="32" y2="55"/>
+      <line x1="32" y1="32" x2="9" y2="32"/>
+    </g>
+    <!-- 4 short saffron rays at diagonals -->
+    <g stroke="#D97830" stroke-width="2.5">
+      <line x1="32" y1="32" x2="46.5" y2="17.5"/>
+      <line x1="32" y1="32" x2="46.5" y2="46.5"/>
+      <line x1="32" y1="32" x2="17.5" y2="46.5"/>
+      <line x1="32" y1="32" x2="17.5" y2="17.5"/>
+    </g>
+  </g>
+
+  <!-- Cream centre disc covering ray ends -->
+  <circle cx="32" cy="32" r="8" fill="#F7F1E3" stroke="#B8873A" stroke-width="2"/>
+
+  <!-- Solid gold bindu -->
+  <circle cx="32" cy="32" r="3.5" fill="#B8873A"/>
+</svg>

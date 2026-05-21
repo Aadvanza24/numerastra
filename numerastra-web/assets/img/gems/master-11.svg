@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra gemstone — Pearl + Moonstone (Master 11)
+  Two pale stones overlapping. Left pearl, right moonstone (cooler tone).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="Pearl and Moonstone">
+  <defs>
+    <radialGradient id="m11-pearl" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FCFAF5"/>
+      <stop offset="60%" stop-color="#EDE3D0"/>
+      <stop offset="100%" stop-color="#A89878"/>
+    </radialGradient>
+    <radialGradient id="m11-moon" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F5F8FA"/>
+      <stop offset="60%" stop-color="#D8DEE2"/>
+      <stop offset="100%" stop-color="#7A8590"/>
+    </radialGradient>
+    <linearGradient id="m11-shine" x1="30%" y1="20%" x2="60%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Combined drop shadow -->
+  <ellipse cx="120" cy="170" rx="90" ry="6" fill="#7A5A20" opacity="0.18"/>
+
+  <!-- Right stone (moonstone) — drawn first, partially behind left -->
+  <g transform="translate(48, 0)">
+    <ellipse cx="100" cy="100" rx="58" ry="42" fill="url(#m11-moon)" stroke="#7A8590" stroke-width="1.5"/>
+    <g fill="none" stroke="#7A8590" stroke-width="1" opacity="0.5">
+      <line x1="100" y1="58" x2="65" y2="88"/>
+      <line x1="100" y1="58" x2="135" y2="88"/>
+      <line x1="100" y1="58" x2="100" y2="100"/>
+      <line x1="65" y1="88" x2="100" y2="100"/>
+      <line x1="135" y1="88" x2="100" y2="100"/>
+      <line x1="65" y1="112" x2="100" y2="100"/>
+      <line x1="135" y1="112" x2="100" y2="100"/>
+      <line x1="100" y1="142" x2="100" y2="100"/>
+    </g>
+    <ellipse cx="80" cy="80" rx="18" ry="12" fill="url(#m11-shine)" opacity="0.7" transform="rotate(-25 80 80)"/>
+  </g>
+
+  <!-- Left stone (pearl) — overlapping in front -->
+  <g transform="translate(-12, 0)">
+    <ellipse cx="100" cy="100" rx="58" ry="42" fill="url(#m11-pearl)" stroke="#A89878" stroke-width="1.5"/>
+    <g fill="none" stroke="#A89878" stroke-width="1" opacity="0.5">
+      <line x1="100" y1="58" x2="65" y2="88"/>
+      <line x1="100" y1="58" x2="135" y2="88"/>
+      <line x1="100" y1="58" x2="100" y2="100"/>
+      <line x1="65" y1="88" x2="100" y2="100"/>
+      <line x1="135" y1="88" x2="100" y2="100"/>
+      <line x1="65" y1="112" x2="100" y2="100"/>
+      <line x1="135" y1="112" x2="100" y2="100"/>
+      <line x1="100" y1="142" x2="100" y2="100"/>
+    </g>
+    <ellipse cx="80" cy="80" rx="18" ry="12" fill="url(#m11-shine)" opacity="0.7" transform="rotate(-25 80 80)"/>
+  </g>
+</svg>

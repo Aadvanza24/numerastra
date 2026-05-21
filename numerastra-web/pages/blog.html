@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Numerastra | Numerology Insights & Guides</title>
+<meta name="description" content="Deep guides on life path numbers, angel numbers, master numbers, name correction, Vedic numerology, and how to apply numerology to your daily life.">
+<link rel="canonical" href="https://numerastra.com/pages/blog.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Numerology Insights & Guides">
+<meta property="og:description" content="Deep guides on life path numbers, angel numbers, master numbers, name correction, Vedic numerology, and how to apply numerology to your daily life.">
+<meta property="og:url" content="https://numerastra.com/pages/blog.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Numerology Insights & Guides">
+<meta name="twitter:description" content="Deep guides on life path numbers, angel numbers, master numbers, name correction, Vedic numerology, and how to apply numerology to your daily life.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<style>
+.blog-hero { text-align: center; padding: 80px 24px 40px; max-width: 720px; margin: 0 auto; }
+.featured-card { background: var(--ink2); border: 0.5px solid var(--border2); border-radius: var(--r-xl); padding: 0; overflow: hidden; max-width: 980px; margin: 0 auto 56px; display: grid; grid-template-columns: 1.2fr 1fr; }
+@media (max-width: 720px) { .featured-card { grid-template-columns: 1fr; } }
+.featured-img { background: linear-gradient(135deg, var(--ink3) 0%, var(--ink4) 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; padding: 40px; position: relative; }
+.featured-img-num { font-family: 'Crimson Text', serif; font-size: 140px; color: var(--gold); line-height: 1; opacity: 0.95; }
+.featured-img::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(11,13,23,0.4) 100%); pointer-events: none; }
+.featured-content { padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; }
+.featured-eye { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.featured-title { font-family: 'Crimson Text', serif; font-size: 28px; font-weight: 600; color: var(--text); line-height: 1.2; margin-bottom: 12px; }
+.featured-excerpt { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+.featured-meta { font-size: 12px; color: var(--faint); display: flex; gap: 14px; margin-bottom: 20px; }
+
+.cats-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+.cat-pill { font-size: 12px; padding: 6px 16px; background: var(--ink2); border: 0.5px solid var(--border); border-radius: 16px; color: var(--muted); cursor: pointer; transition: all .18s; }
+.cat-pill:hover { border-color: var(--gold); color: var(--gold); }
+.cat-pill.on { background: var(--gold-faint); border-color: var(--gold); color: var(--gold); }
+
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; max-width: 1080px; margin: 0 auto; }
+.post-card { background: var(--ink2); border: 0.5px solid var(--border); border-radius: var(--r-lg); overflow: hidden; transition: border-color .2s, transform .2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.post-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+.post-thumb { background: linear-gradient(135deg, var(--ink3) 0%, var(--ink4) 100%); height: 140px; display: flex; align-items: center; justify-content: center; position: relative; }
+.post-thumb-num { font-family: 'Crimson Text', serif; font-size: 64px; color: var(--gold); line-height: 1; }
+.post-thumb-glyph { font-family: 'Crimson Text', serif; font-size: 48px; color: var(--gold); }
+.post-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.post-cat { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.post-title { font-family: 'Crimson Text', serif; font-size: 18px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 10px; }
+.post-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 14px; flex: 1; }
+.post-meta { font-size: 11px; color: var(--faint); display: flex; gap: 12px; padding-top: 12px; border-top: 0.5px solid var(--border); }
+
+.newsletter { max-width: 720px; margin: 80px auto 0; background: var(--ink2); border: 0.5px solid var(--border); border-radius: var(--r-xl); padding: 40px; text-align: center; }
+.newsletter h2 { margin-bottom: 8px; }
+.newsletter p { color: var(--muted); margin-bottom: 24px; }
+.newsletter-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+.newsletter-form input { flex: 1; background: var(--ink3); border: 0.5px solid var(--border); border-radius: var(--r-sm); color: var(--text); font-family: inherit; font-size: 14px; padding: 12px 16px; outline: none; }
+.newsletter-form input:focus { border-color: var(--gold); }
+@media (max-width: 540px) { .newsletter-form { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+  <nav class="site-nav">
+    <a href="../index.html#calculator">Calculator</a>
+    <a href="numerology.html">Numerology</a>
+    <a href="angel-numbers.html">Angel Numbers</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="/pages/remedies.html">Remedies</a>
+        <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a href="login.html" class="header-cta">Sign in</a>
+</header>
+
+<main>
+
+<section class="blog-hero">
+  <div class="eye">The journal</div>
+  <h1>Numerology <em>insights</em></h1>
+  <p style="font-size:17px;color:var(--muted);max-width:540px;margin:24px auto 0;line-height:1.7">Deep guides on numbers, names, and the patterns shaping your life. Updated weekly.</p>
+</section>
+
+<section class="section">
+
+  <a href="../blog/life-path-number-guide.html" class="featured-card" style="text-decoration:none;color:inherit">
+    <div class="featured-img">
+      <div class="featured-img-num">7</div>
+    </div>
+    <div class="featured-content">
+      <div class="featured-eye">Featured · The numbers</div>
+      <h2 class="featured-title">The Complete Guide to Your Life Path Number</h2>
+      <p class="featured-excerpt">Your life path is the most important number in numerology. This deep guide explains how to calculate it, what each number means, and how to use yours to make better decisions about career, relationships, and timing.</p>
+      <div class="featured-meta">
+        <span>April 18, 2026</span>
+        <span>·</span>
+        <span>12 min read</span>
+      </div>
+      <span class="btn btn-secondary" style="align-self:flex-start">Read the guide →</span>
+    </div>
+  </a>
+
+  <div class="cats-row">
+    <span class="cat-pill on" onclick="filterPosts('all', this)">All articles</span>
+    <span class="cat-pill" onclick="filterPosts('numbers', this)">The numbers</span>
+    <span class="cat-pill" onclick="filterPosts('angel', this)">Angel numbers</span>
+    <span class="cat-pill" onclick="filterPosts('vedic', this)">Vedic</span>
+    <span class="cat-pill" onclick="filterPosts('practical', this)">Practical</span>
+    <span class="cat-pill" onclick="filterPosts('compatibility', this)">Compatibility</span>
+  </div>
+
+  <div class="posts-grid">
+
+    <a href="../blog/life-path-number-guide.html" class="post-card" data-cat="numbers">
+      <div class="post-thumb"><div class="post-thumb-num">7</div></div>
+      <div class="post-body">
+        <div class="post-cat">The numbers</div>
+        <h3 class="post-title">The Complete Guide to Your Life Path Number</h3>
+        <p class="post-excerpt">How to calculate it, what each number means, and how to use yours to make better life decisions.</p>
+        <div class="post-meta"><span>April 18, 2026</span><span>·</span><span>12 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../blog/angel-number-111-meaning.html" class="post-card" data-cat="angel">
+      <div class="post-thumb"><div class="post-thumb-num" style="font-size:48px">111</div></div>
+      <div class="post-body">
+        <div class="post-cat">Angel numbers</div>
+        <h3 class="post-title">What Does Seeing 111 Mean?</h3>
+        <p class="post-excerpt">The angel number 111 is one of the most commonly seen sequences. Here's what it actually means and how to respond.</p>
+        <div class="post-meta"><span>April 15, 2026</span><span>·</span><span>6 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../blog/master-numbers-guide.html" class="post-card" data-cat="numbers">
+      <div class="post-thumb"><div class="post-thumb-glyph">11</div></div>
+      <div class="post-body">
+        <div class="post-cat">Master numbers</div>
+        <h3 class="post-title">Master Numbers 11, 22, 33: The Complete Guide</h3>
+        <p class="post-excerpt">If your life path reduces to 11, 22, or 33, you carry a master number. What that means — and what it demands.</p>
+        <div class="post-meta"><span>April 12, 2026</span><span>·</span><span>10 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../blog/moolank-bhagyank-namank.html" class="post-card" data-cat="vedic">
+      <div class="post-thumb"><div class="post-thumb-glyph">ॐ</div></div>
+      <div class="post-body">
+        <div class="post-cat">Vedic numerology</div>
+        <h3 class="post-title">Moolank, Bhagyank, and Namank Explained</h3>
+        <p class="post-excerpt">The three core numbers of Vedic Ankashastra — what each represents and why they matter together.</p>
+        <div class="post-meta"><span>April 8, 2026</span><span>·</span><span>9 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../blog/name-correction-guide.html" class="post-card" data-cat="practical">
+      <div class="post-thumb"><div class="post-thumb-glyph">N</div></div>
+      <div class="post-body">
+        <div class="post-cat">Practical</div>
+        <h3 class="post-title">Should You Change Your Name for Better Numerology?</h3>
+        <p class="post-excerpt">When name correction works, when it doesn't, and how to do it without legal hassle.</p>
+        <div class="post-meta"><span>April 5, 2026</span><span>·</span><span>8 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../angel-numbers/444.html" class="post-card" data-cat="angel">
+      <div class="post-thumb"><div class="post-thumb-num" style="font-size:48px">444</div></div>
+      <div class="post-body">
+        <div class="post-cat">Angel numbers</div>
+        <h3 class="post-title">444 Meaning: The Number of Divine Protection</h3>
+        <p class="post-excerpt">Why 444 appears at moments of struggle, and what spiritual traditions say about its message.</p>
+        <div class="post-meta"><span>April 1, 2026</span><span>·</span><span>5 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../pages/compatibility.html" class="post-card" data-cat="compatibility">
+      <div class="post-thumb"><div class="post-thumb-glyph">∞</div></div>
+      <div class="post-body">
+        <div class="post-cat">Compatibility</div>
+        <h3 class="post-title">Numerology Compatibility: Best and Worst Matches</h3>
+        <p class="post-excerpt">Which life path numbers work well together, which clash — and why opposites sometimes attract. Try our calculator.</p>
+        <div class="post-meta"><span>March 28, 2026</span><span>·</span><span>11 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../blog/personal-year-2026.html" class="post-card" data-cat="practical">
+      <div class="post-thumb"><div class="post-thumb-num">1</div></div>
+      <div class="post-body">
+        <div class="post-cat">Your year ahead</div>
+        <h3 class="post-title">Your Personal Year Number 2026 — What It Means</h3>
+        <p class="post-excerpt">2026 is a Universal Year 1 — a fresh 9-year cycle begins. Your personal year overlays this with a specific flavour.</p>
+        <div class="post-meta"><span>April 2, 2026</span><span>·</span><span>7 min read</span></div>
+      </div>
+    </a>
+
+    <a href="../numerology/3.html" class="post-card" data-cat="numbers">
+      <div class="post-thumb"><div class="post-thumb-num">3</div></div>
+      <div class="post-body">
+        <div class="post-cat">The numbers</div>
+        <h3 class="post-title">Life Path 3: The Creator's Path</h3>
+        <p class="post-excerpt">Joy, expression, and communication — the strengths and traps of the most artistic life path number.</p>
+        <div class="post-meta"><span>March 20, 2026</span><span>·</span><span>8 min read</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="newsletter">
+    <div class="eye">Newsletter</div>
+    <h2>Numbers in your <em>inbox</em></h2>
+    <p>Weekly insights on numerology, your personal year, and timing for important decisions. No spam.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Newsletter signup will be active at launch.')">
+      <input type="email" placeholder="your@email.com" required>
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+      <p>Ancient numerology for the modern world.</p>
+    </div>
+    <div class="footer-col"><h4>Tools</h4><ul>
+      <li><a href="../index.html#calculator">Calculator</a></li>
+      <li><a href="angel-numbers.html">Angel numbers</a></li>
+      <li><a href="numerology.html">Life path numbers</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Account</h4><ul>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="login.html">Sign in</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Numerastra</span></div>
+</footer>
+
+<script>
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.cat-pill').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.post-card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+  });
+}
+</script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="diya" cx="50%" cy="42%" r="55%">
+      <stop offset="0%"  stop-color="#D97830" stop-opacity="0.14"/>
+      <stop offset="40%" stop-color="#B8873A" stop-opacity="0.06"/>
+      <stop offset="75%" stop-color="#D97830" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#F9F3E4"/>
+      <stop offset="100%" stop-color="#F4ECD7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#parchment)"/>
+  <rect width="1200" height="630" fill="url(#diya)"/>
+
+  <line x1="140" y1="100" x2="1060" y2="100" stroke="#B8873A" stroke-opacity="0.32" stroke-width="0.7"/>
+  <circle cx="600" cy="100" r="3.5" fill="#D97830"/>
+
+  <circle cx="600" cy="235" r="72" fill="none" stroke="#B8873A" stroke-width="2.2"/>
+  <circle cx="600" cy="235" r="66" fill="none" stroke="#D97830" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="600" y="266" font-family="Georgia, 'Crimson Text', serif" font-size="72" fill="#B8873A" text-anchor="middle" font-weight="500">N</text>
+
+  <text x="600" y="400" font-family="Georgia, 'Crimson Text', serif" font-size="62" fill="#2B2319" text-anchor="middle" font-weight="500" letter-spacing="-0.01em">Decode the</text>
+  <text x="600" y="472" font-family="Georgia, 'Crimson Text', serif" font-size="62" fill="#B8873A" text-anchor="middle" font-style="italic" letter-spacing="-0.01em">language of numbers</text>
+
+  <text x="600" y="526" font-family="system-ui, -apple-system, 'DM Sans', sans-serif" font-size="22" fill="#5C4E38" text-anchor="middle">Pythagorean · Chaldean · Vedic numerology</text>
+
+  <line x1="140" y1="560" x2="1060" y2="560" stroke="#B8873A" stroke-opacity="0.32" stroke-width="0.7"/>
+  <circle cx="600" cy="560" r="3.5" fill="#D97830"/>
+  <text x="600" y="595" font-family="system-ui, -apple-system, 'DM Sans', sans-serif" font-size="13" fill="#D97830" text-anchor="middle" letter-spacing="0.28em" font-weight="500">NUMERASTRA.COM</text>
+</svg>

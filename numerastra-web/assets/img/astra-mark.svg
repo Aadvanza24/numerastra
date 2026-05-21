@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra — Astra Orbit mark
+  9-fold symmetry: 9 numbers in numerology, 9 grahas in Vedic system
+  Palette: gold (#B8873A) deep, gold-bright (#D4A24A), saffron (#D97830)
+  Designed for use 80px+. Use astra-favicon.svg for smaller sizes.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Numerastra">
+  <defs>
+    <radialGradient id="centerGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A24A"/>
+      <stop offset="100%" stop-color="#B8873A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer thin ring -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#B8873A" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- 9 perimeter markers (numerology 1-9) — small dots at 40° intervals -->
+  <g fill="#B8873A" opacity="0.85">
+    <circle cx="100.0" cy="8.0" r="2.4"/>
+    <circle cx="159.1" cy="29.5" r="2.4"/>
+    <circle cx="190.6" cy="84.0" r="2.4"/>
+    <circle cx="179.7" cy="146.0" r="2.4"/>
+    <circle cx="131.5" cy="186.5" r="2.4"/>
+    <circle cx="68.5" cy="186.5" r="2.4"/>
+    <circle cx="20.3" cy="146.0" r="2.4"/>
+    <circle cx="9.4" cy="84.0" r="2.4"/>
+    <circle cx="40.9" cy="29.5" r="2.4"/>
+  </g>
+
+  <!-- Middle ring (subtle) -->
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#B8873A" stroke-width="0.7" opacity="0.35"/>
+
+  <!-- 9 long gold rays (the "primary star") -->
+  <g fill="none" stroke="#B8873A" stroke-width="1.8" stroke-linecap="round">
+    <line x1="100" y1="100" x2="100.0" y2="32.0"/>
+    <line x1="100" y1="100" x2="143.7" y2="47.9"/>
+    <line x1="100" y1="100" x2="167.0" y2="88.2"/>
+    <line x1="100" y1="100" x2="158.9" y2="134.0"/>
+    <line x1="100" y1="100" x2="123.3" y2="163.9"/>
+    <line x1="100" y1="100" x2="76.7" y2="163.9"/>
+    <line x1="100" y1="100" x2="41.1" y2="134.0"/>
+    <line x1="100" y1="100" x2="33.0" y2="88.2"/>
+    <line x1="100" y1="100" x2="56.3" y2="47.9"/>
+  </g>
+
+  <!-- 9 shorter saffron rays between gold rays — secondary radiance -->
+  <g fill="none" stroke="#D97830" stroke-width="1.3" stroke-linecap="round" opacity="0.85">
+    <line x1="100" y1="100" x2="117.1" y2="53.0"/>
+    <line x1="100" y1="100" x2="143.3" y2="75.0"/>
+    <line x1="100" y1="100" x2="149.2" y2="108.7"/>
+    <line x1="100" y1="100" x2="132.1" y2="138.3"/>
+    <line x1="100" y1="100" x2="100.0" y2="150.0"/>
+    <line x1="100" y1="100" x2="67.9" y2="138.3"/>
+    <line x1="100" y1="100" x2="50.8" y2="108.7"/>
+    <line x1="100" y1="100" x2="56.7" y2="75.0"/>
+    <line x1="100" y1="100" x2="82.9" y2="53.0"/>
+  </g>
+
+  <!-- Inner ring frame for the central sun -->
+  <circle cx="100" cy="100" r="22" fill="#F7F1E3" stroke="#B8873A" stroke-width="1.6"/>
+
+  <!-- Central filled disc — "the One / bindu" -->
+  <circle cx="100" cy="100" r="9.5" fill="url(#centerGold)"/>
+
+  <!-- Tiny dark dot at very centre — focal point -->
+  <circle cx="100" cy="100" r="2.2" fill="#7A5A20"/>
+</svg>

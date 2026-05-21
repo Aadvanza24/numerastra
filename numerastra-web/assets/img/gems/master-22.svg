@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Numerastra gemstone — Hessonite + Yellow Sapphire (Master 22)
+  Two stones overlapping. Left in front, right behind.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="Hessonite + Yellow Sapphire (Master 22)">
+  <defs>
+    <radialGradient id="m22-r" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F4C842"/>
+      <stop offset="60%" stop-color="#D4A52A"/>
+      <stop offset="100%" stop-color="#7A5A10"/>
+    </radialGradient>
+    <radialGradient id="m22-l" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#E89540"/>
+      <stop offset="60%" stop-color="#B26830"/>
+      <stop offset="100%" stop-color="#6E3815"/>
+    </radialGradient>
+    <linearGradient id="m22-shine" x1="30%" y1="20%" x2="60%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="120" cy="170" rx="90" ry="6" fill="#7A5A20" opacity="0.18"/>
+
+  <!-- Right stone (behind) -->
+  <g transform="translate(48, 0)">
+    <ellipse cx="100" cy="100" rx="58" ry="42" fill="url(#m22-r)" stroke="#7A5A10" stroke-width="1.5"/>
+    <g fill="none" stroke="#7A5A10" stroke-width="1" opacity="0.55">
+      <line x1="100" y1="58" x2="65" y2="88"/>
+      <line x1="100" y1="58" x2="135" y2="88"/>
+      <line x1="100" y1="58" x2="100" y2="100"/>
+      <line x1="65" y1="88" x2="100" y2="100"/>
+      <line x1="135" y1="88" x2="100" y2="100"/>
+      <line x1="65" y1="112" x2="100" y2="100"/>
+      <line x1="135" y1="112" x2="100" y2="100"/>
+      <line x1="100" y1="142" x2="100" y2="100"/>
+    </g>
+    <ellipse cx="80" cy="80" rx="18" ry="12" fill="url(#m22-shine)" opacity="0.7" transform="rotate(-25 80 80)"/>
+  </g>
+
+  <!-- Left stone (front) -->
+  <g transform="translate(-12, 0)">
+    <ellipse cx="100" cy="100" rx="58" ry="42" fill="url(#m22-l)" stroke="#6E3815" stroke-width="1.5"/>
+    <g fill="none" stroke="#6E3815" stroke-width="1" opacity="0.55">
+      <line x1="100" y1="58" x2="65" y2="88"/>
+      <line x1="100" y1="58" x2="135" y2="88"/>
+      <line x1="100" y1="58" x2="100" y2="100"/>
+      <line x1="65" y1="88" x2="100" y2="100"/>
+      <line x1="135" y1="88" x2="100" y2="100"/>
+      <line x1="65" y1="112" x2="100" y2="100"/>
+      <line x1="135" y1="112" x2="100" y2="100"/>
+      <line x1="100" y1="142" x2="100" y2="100"/>
+    </g>
+    <ellipse cx="80" cy="80" rx="18" ry="12" fill="url(#m22-shine)" opacity="0.7" transform="rotate(-25 80 80)"/>
+  </g>
+</svg>

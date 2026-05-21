@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing — Numerastra | Free &amp; Pro numerology plans</title>
+<meta name="description" content="Simple, transparent pricing. Free forever with all 11 calculators. Pro at ₹449/month unlocks unlimited AI guidance and full reports. ₹249 one-time basic report.">
+<link rel="canonical" href="https://numerastra.com/pages/pricing.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pricing | Free &amp; Pro numerology plans">
+<meta property="og:description" content="Simple, transparent pricing. Free forever with all 11 calculators. Pro at ₹449/month unlocks unlimited AI guidance and full reports. ₹249 one-time basic report.">
+<meta property="og:url" content="https://numerastra.com/pages/pricing.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pricing | Free &amp; Pro numerology plans">
+<meta name="twitter:description" content="Simple, transparent pricing. Free forever with all 11 calculators. Pro at ₹449/month unlocks unlimited AI guidance and full reports. ₹249 one-time basic report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<style>
+.pricing-hero { padding: 60px 24px 32px; text-align: center; }
+.pricing-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 12px 0 12px; }
+.pricing-hero p.lead { max-width: 560px; margin: 0 auto; font-size: 17px; color: var(--muted); line-height: 1.6; }
+
+.billing-toggle {
+  display: inline-flex; gap: 4px; margin-top: 28px;
+  padding: 4px; background: var(--ink2);
+  border: 1px solid var(--border); border-radius: 100px;
+}
+.billing-option { padding: 8px 20px; border-radius: 100px; font-size: 0.85rem; color: var(--muted); cursor: pointer; transition: all 120ms; }
+.billing-option.active { background: var(--gold); color: var(--ink); font-weight: 500; }
+.save-badge { font-size: 0.65rem; padding: 2px 6px; background: rgba(62,207,184,0.15); color: var(--teal); border-radius: 100px; margin-left: 6px; }
+
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; margin: 48px auto 0; padding: 0 24px; }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 440px; } }
+
+.price-card {
+  padding: 36px 28px; background: var(--ink2);
+  border: 1px solid var(--border); border-radius: 16px;
+  display: flex; flex-direction: column;
+  transition: transform 220ms, border-color 220ms;
+}
+.price-card:hover { transform: translateY(-2px); border-color: var(--gold-d); }
+.price-card.featured { border: 1.5px solid var(--gold); position: relative; }
+.price-featured-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--gold); color: var(--ink);
+  padding: 4px 14px; border-radius: 100px; font-size: 0.7rem;
+  letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+}
+.price-name { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.price-tagline { color: var(--muted); font-size: 0.9rem; margin-top: 6px; line-height: 1.4; }
+.price-amount { font-family: 'Crimson Text', serif; font-size: 3rem; color: var(--text); font-weight: 500; margin: 20px 0 4px; line-height: 1; }
+.price-amount .currency { font-size: 1.25rem; color: var(--gold); vertical-align: top; margin-right: 2px; }
+.price-amount .per { font-size: 1rem; color: var(--muted-2); font-family: 'DM Sans', sans-serif; }
+.price-compare { font-size: 0.8rem; color: var(--muted-2); text-decoration: line-through; margin-bottom: 8px; min-height: 1em; }
+.price-period { font-size: 0.85rem; color: var(--muted-2); margin-bottom: 24px; }
+.price-features { list-style: none; margin: 0 0 24px; padding: 0; flex: 1; }
+.price-features li {
+  padding: 10px 0; font-size: 0.9rem; color: var(--text);
+  display: flex; align-items: flex-start; gap: 8px;
+  border-bottom: 1px solid var(--border); line-height: 1.4;
+}
+.price-features li::before { content: '✓'; color: var(--gold); font-weight: 500; flex-shrink: 0; width: 16px; }
+.price-features li.unavailable { color: var(--muted-2); }
+.price-features li.unavailable::before { content: '—'; color: var(--muted-2); }
+.price-features li:last-child { border-bottom: none; }
+
+.payment-methods {
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+  margin: 36px auto 0; padding: 20px;
+  background: var(--ink2); border: 1px solid var(--border);
+  border-radius: 12px; max-width: 720px;
+}
+.payment-badge { padding: 6px 14px; background: var(--gold-faint); border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; color: var(--muted); }
+
+.guarantee {
+  max-width: 560px; margin: 36px auto 0; text-align: center;
+  padding: 28px; background: rgba(62,207,184,0.05);
+  border: 1px solid rgba(62,207,184,0.15); border-radius: 12px;
+}
+.guarantee h3 { color: var(--teal); font-size: 1.15rem; margin-bottom: 8px; font-family: 'Crimson Text', serif; }
+.guarantee p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+.compare-wrap { max-width: 820px; margin: 80px auto; padding: 0 24px; }
+.compare-wrap h2 { text-align: center; font-family: 'Crimson Text', serif; font-size: 2rem; margin-bottom: 36px; color: var(--text); }
+.compare-wrap em { color: var(--gold); font-style: italic; }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.comparison-table th, .comparison-table td { padding: 12px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+.comparison-table th { font-family: 'Crimson Text', serif; font-weight: 500; color: var(--gold); font-size: 0.95rem; }
+.comparison-table td:first-child, .comparison-table th:first-child { text-align: left; color: var(--muted); }
+.comparison-table .check { color: var(--teal); }
+.comparison-table .cross { color: var(--muted-2); }
+@media (max-width: 720px) { .comparison-table { font-size: 0.78rem; } .comparison-table th, .comparison-table td { padding: 8px; } }
+
+.price-faq { max-width: 640px; margin: 80px auto 0; padding: 0 24px; }
+.price-faq h2 { text-align: center; font-family: 'Crimson Text', serif; font-size: 2rem; margin-bottom: 36px; color: var(--text); }
+.price-faq em { color: var(--gold); font-style: italic; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-q { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Crimson Text', serif; font-size: 1.05rem; color: var(--text); padding: 8px 0; }
+.faq-icon { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-left: 12px; transition: transform 220ms; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 360ms cubic-bezier(0.4,0,0.2,1); color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+.faq-a-inner { padding: 12px 0; }
+.faq-item.open .faq-a { max-height: 500px; }
+
+.final-cta { text-align: center; padding: 80px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: radial-gradient(ellipse at center, rgba(201,165,90,0.06) 0%, transparent 70%); }
+.final-cta h2 { font-family: 'Crimson Text', serif; font-size: 2.25rem; margin: 12px 0 12px; color: var(--text); }
+.final-cta em { color: var(--gold); font-style: italic; }
+.final-cta p { color: var(--muted); max-width: 480px; margin: 0 auto 24px; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Numerastra Pro",
+  "description": "Unlimited AI numerology guidance, full PDF reports across Pythagorean, Chaldean, and Vedic systems, name correction with 12 variants.",
+  "brand": { "@type": "Brand", "name": "Numerastra" },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Pro Monthly",
+      "price": "449",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Annual",
+      "price": "4499",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Basic Report",
+      "price": "249",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <div class="logo-mark">N</div>
+    <div class="logo-text">Numer<span>astra</span></div>
+  </a>
+  <nav class="site-nav">
+    <a href="../index.html">Calculator</a>
+    <a href="numerology.html">Numerology</a>
+    <a href="angel-numbers.html">Angel Numbers</a>
+    <a href="blog.html">Blog</a>
+    <a href="/pages/remedies.html">Remedies</a>
+        <a href="pricing.html" class="active">Pricing</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a href="login.html" class="header-cta">Sign in</a>
+</header>
+
+<main>
+
+<section class="pricing-hero">
+  <div class="eye">Pricing</div>
+  <h1>Simple plans. <em>Ancient wisdom.</em></h1>
+  <p class="lead">Start free — all 11 calculators work without a card. Upgrade when you want unlimited AI guidance and full PDF reports.</p>
+
+  <div class="billing-toggle">
+    <div class="billing-option active" data-billing="monthly" onclick="setBilling('monthly')">Monthly</div>
+    <div class="billing-option" data-billing="annual" onclick="setBilling('annual')">Annual <span class="save-badge">save 17%</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="pricing-grid">
+
+    <div class="price-card">
+      <div class="price-name">Free</div>
+      <div class="price-tagline">Everything you need to start</div>
+      <div class="price-amount"><span class="currency">₹</span>0</div>
+      <div class="price-compare">&nbsp;</div>
+      <div class="price-period">Forever · no card required</div>
+      <ul class="price-features">
+        <li>All 11 calculators</li>
+        <li>Pythagorean, Chaldean, Vedic synthesis</li>
+        <li>Biorhythm, Lo Shu, Angel numbers</li>
+        <li>Compatibility checks</li>
+        <li>Personal year forecast</li>
+        <li>2 lifetime AI questions</li>
+        <li class="unavailable">Full PDF reports</li>
+        <li class="unavailable">Unlimited AI guidance</li>
+        <li class="unavailable">Multiple profiles</li>
+      </ul>
+      <a href="../index.html" class="btn btn-ghost btn-block">Start calculating →</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="price-featured-badge">Most chosen</div>
+      <div class="price-name">Pro</div>
+      <div class="price-tagline">Unlimited guidance, always</div>
+      <div class="price-amount">
+        <span class="currency">₹</span><span id="pro-price">449</span><span class="per" id="pro-per">/ mo</span>
+      </div>
+      <div class="price-compare" id="pro-compare">&nbsp;</div>
+      <div class="price-period" id="pro-period">Monthly · cancel anytime</div>
+      <ul class="price-features">
+        <li>Everything in Free</li>
+        <li>Unlimited AI numerology guidance</li>
+        <li>Full PDF reports (all 3 systems)</li>
+        <li>Personal year monthly forecast</li>
+        <li>10 profiles for family &amp; friends</li>
+        <li>Name correction with 12 variants</li>
+        <li>Auspicious date finder</li>
+        <li>Priority email support</li>
+        <li>Ad-free experience</li>
+      </ul>
+      <a href="#" class="btn btn-primary btn-block" onclick="startCheckout('pro'); return false;">Start Pro</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">Basic report</div>
+      <div class="price-tagline">One-time purchase, no subscription</div>
+      <div class="price-amount"><span class="currency">₹</span>249</div>
+      <div class="price-compare">&nbsp;</div>
+      <div class="price-period">One-time · 6 month access</div>
+      <ul class="price-features">
+        <li>Full numerology report (PDF)</li>
+        <li>All 3 systems detailed</li>
+        <li>10 AI questions included</li>
+        <li>Name correction suggestions</li>
+        <li>Compatibility analysis</li>
+        <li>Lo Shu grid interpretation</li>
+        <li>Personal year forecast</li>
+        <li class="unavailable">Ongoing updates</li>
+        <li class="unavailable">Multiple profiles</li>
+      </ul>
+      <a href="#" class="btn btn-ghost btn-block" onclick="startCheckout('basic_report'); return false;">Buy once · ₹249</a>
+    </div>
+
+  </div>
+
+  <div class="payment-methods">
+    <span class="payment-badge">UPI</span>
+    <span class="payment-badge">Razorpay</span>
+    <span class="payment-badge">Credit card</span>
+    <span class="payment-badge">Debit card</span>
+    <span class="payment-badge">Net banking</span>
+    <span class="payment-badge">Wallets</span>
+    <span class="payment-badge">Stripe (international)</span>
+  </div>
+
+  <div class="guarantee">
+    <h3>7-day money-back guarantee</h3>
+    <p>Not satisfied? Email us within 7 days for a full refund. No questions, no friction.</p>
+  </div>
+</section>
+
+<section class="compare-wrap">
+  <h2>Full <em>feature comparison</em></h2>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th style="width:40%">Feature</th>
+        <th>Free</th>
+        <th>Basic</th>
+        <th>Pro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Pythagorean calculator</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Chaldean calculator</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Vedic (Ankashastra)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Synthesis across 3 systems</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Biorhythm + Lo Shu grid</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Angel number lookups</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>AI guidance questions</td><td>2 lifetime</td><td>10 total</td><td class="check">Unlimited</td></tr>
+      <tr><td>PDF reports</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Name correction (12 variants)</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Personal year forecast</td><td>Current only</td><td>Full year</td><td>Monthly</td></tr>
+      <tr><td>Multiple profiles</td><td>1</td><td>1</td><td>10</td></tr>
+      <tr><td>Compatibility reports</td><td>Basic</td><td class="check">Full</td><td class="check">Unlimited</td></tr>
+      <tr><td>Auspicious date finder</td><td class="cross">—</td><td>30-day window</td><td>Year round</td></tr>
+      <tr><td>Priority support</td><td class="cross">—</td><td class="cross">—</td><td class="check">✓</td></tr>
+      <tr><td>Ad-free</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="price-faq">
+  <h2>Common <em>questions</em></h2>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Can I switch plans anytime?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">Yes. Upgrade, downgrade, or cancel anytime — no lock-ins. Prorated refunds on annual plans if you cancel within the first 30 days.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What if I'm outside India?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">International users are charged in USD via Stripe. Pro is $6.99/month or $69.99/year. Basic report is $3.99 one-time. Same features, same guarantee.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Do you offer refunds?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">7-day money-back guarantee on all plans — email us and we'll refund in full. After 7 days, Pro can be cancelled anytime; you keep access until the end of the paid period.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Will my data be safe?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">Yes. We store only your mobile number, email (if provided), and subscription status. We never sell data. Payment details are handled by Razorpay and Stripe — we never see your card. Read our <a href="privacy.html" style="color:var(--gold)">full privacy policy</a>.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is there a family discount?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">Yes — Pro includes 10 profiles for family and friends at no extra cost. That works out to ₹45/month per profile if your whole family uses it. For larger groups or teams, email us for bulk pricing.</div></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What payment methods do you accept?</span><div class="faq-icon">+</div></div>
+    <div class="faq-a"><div class="faq-a-inner">In India: UPI (GPay, PhonePe, Paytm), all major credit and debit cards, net banking from 50+ banks, and wallets via Razorpay. International: Visa, Mastercard, American Express, and Apple Pay via Stripe.</div></div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="eye">Still deciding?</div>
+  <h2>Start free. <em>No card required.</em></h2>
+  <p>Use everything for free. Upgrade only when it feels right. Takes about 2 minutes.</p>
+  <a href="../index.html" class="btn btn-primary btn-lg">Calculate my numbers →</a>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">
+        <div class="logo-mark">N</div>
+        <div class="logo-text">Numer<span>astra</span></div>
+      </a>
+      <p>Ancient numerology for the modern world.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="../index.html">Calculator</a></li>
+        <li><a href="results.html">Full reading</a></li>
+        <li><a href="compatibility.html">Compatibility</a></li>
+        <li><a href="auspicious.html">Auspicious dates</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="numerology.html">Life path numbers</a></li>
+        <li><a href="angel-numbers.html">Angel numbers</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Sign in</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Numerastra</span>
+    <span style="display:flex;gap:16px"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+// Track current billing cadence — updates Pro price dynamically
+let billingMode = 'monthly';
+
+function setBilling(mode) {
+  billingMode = mode;
+  document.querySelectorAll('.billing-option').forEach(o => o.classList.toggle('active', o.dataset.billing === mode));
+  const priceEl = document.getElementById('pro-price');
+  const perEl = document.getElementById('pro-per');
+  const compareEl = document.getElementById('pro-compare');
+  const periodEl = document.getElementById('pro-period');
+  if (mode === 'annual') {
+    priceEl.textContent = '375';
+    perEl.textContent = '/ mo';
+    compareEl.innerHTML = '₹4,499/year (was ₹5,388)';
+    periodEl.textContent = 'Billed annually · cancel anytime';
+  } else {
+    priceEl.textContent = '449';
+    perEl.textContent = '/ mo';
+    compareEl.innerHTML = '&nbsp;';
+    periodEl.textContent = 'Monthly · cancel anytime';
+  }
+}
+function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+
+/* ═══════════════════════════════════════════════════════════════
+   CHECKOUT FLOW
+   Free → login → trigger Razorpay (India) or Stripe (international)
+   ═══════════════════════════════════════════════════════════════ */
+
+// Rough geo heuristic: if timezone is an Indian one, use Razorpay; else Stripe
+function isIndianUser() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    return tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta';
+  } catch {
+    return true;  // safe default — primary market is India
+  }
+}
+
+function resolvePlanId(baseplan) {
+  // Map button → API plan identifier
+  if (baseplan === 'pro') {
+    return billingMode === 'annual' ? 'pro_annual' : 'pro_monthly';
+  }
+  return baseplan;  // basic_report
+}
+
+async function startCheckout(basePlan) {
+  const plan = resolvePlanId(basePlan);
+
+  // Step 1 — require login
+  if (!Numerastra.auth.isLoggedIn()) {
+    window.location.href = `login.html?plan=${plan}`;
+    return;
+  }
+
+  // Step 2 — branch on region
+  if (isIndianUser()) {
+    await startRazorpay(plan);
+  } else {
+    await startStripe(plan);
+  }
+}
+
+async function startRazorpay(plan) {
+  try {
+    Numerastra.ui.toast('Creating order...', 'info');
+    const order = await Numerastra.api.createRazorpayOrder(plan);
+
+    if (!window.Razorpay) {
+      Numerastra.ui.toast('Payment gateway not loaded. Try refreshing.', 'error');
+      return;
+    }
+
+    const user = Numerastra.auth.currentUser();
+    const rzp = new Razorpay({
+      key:      Numerastra.config?.razorpay?.keyId || NumerastraConfig.razorpay.keyId,
+      order_id: order.orderId,
+      amount:   order.amount,
+      currency: order.currency || 'INR',
+      name:     'Numerastra',
+      description: order.description || 'Numerology subscription',
+      image:    '/assets/img/apple-touch-icon.png',
+      prefill: {
+        contact: user?.mobile || '',
+        email:   user?.email   || '',
+      },
+      theme: { color: '#C9A55A' },
+      handler: async function(response) {
+        try {
+          Numerastra.ui.toast('Verifying payment...', 'info');
+          await Numerastra.api.captureRazorpay({
+            razorpay_order_id:   response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature:  response.razorpay_signature,
+            plan,
+          });
+          Numerastra.ui.toast('Payment successful — welcome to Pro ✨', 'success');
+          setTimeout(() => { window.location.href = '/pages/results.html'; }, 1500);
+        } catch (e) {
+          Numerastra.ui.toast('Payment verification failed: ' + e.message, 'error');
+        }
+      },
+      modal: {
+        ondismiss: () => Numerastra.ui.toast('Payment cancelled', 'warning'),
+      },
+    });
+    rzp.open();
+  } catch (e) {
+    Numerastra.ui.toast(e.message || 'Could not start checkout', 'error');
+  }
+}
+
+async function startStripe(plan) {
+  try {
+    Numerastra.ui.toast('Redirecting to Stripe...', 'info');
+    const session = await Numerastra.api.createStripeCheckout(plan);
+    if (session.url) {
+      window.location.href = session.url;
+    } else {
+      throw new Error('No checkout URL returned');
+    }
+  } catch (e) {
+    Numerastra.ui.toast(e.message || 'Could not start Stripe checkout', 'error');
+  }
+}
+
+// If we arrived here with ?plan=X&action=checkout (from login redirect), fire checkout immediately
+(function autoCheckout() {
+  const params = new URLSearchParams(location.search);
+  if (params.get('action') === 'checkout' && params.get('plan')) {
+    const plan = params.get('plan');
+    if (plan.startsWith('pro_annual')) billingMode = 'annual';
+    // Wait for Razorpay script to load
+    setTimeout(() => {
+      if (plan === 'pro_monthly' || plan === 'pro_annual') startCheckout('pro');
+      else if (plan === 'basic_report') startCheckout('basic_report');
+    }, 600);
+  }
+})();
+</script>
+
+</body>
+</html>

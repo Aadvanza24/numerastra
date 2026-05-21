@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numerology Compatibility Calculator — Numerastra</title>
+<meta name="description" content="Check numerological compatibility between two people. Compare life path numbers, destiny numbers, and Vedic moolank for love, friendship, or business…">
+<link rel="canonical" href="https://numerastra.com/pages/compatibility.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Numerology Compatibility Calculator">
+<meta property="og:description" content="Check numerological compatibility between two people. Compare life path numbers, destiny numbers, and Vedic moolank for love, friendship, or business partnerships.">
+<meta property="og:url" content="https://numerastra.com/pages/compatibility.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Numerology Compatibility Calculator">
+<meta name="twitter:description" content="Check numerological compatibility between two people. Compare life path numbers, destiny numbers, and Vedic moolank for love, friendship, or business partnerships.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+.comp-hero { padding: 72px 24px 32px; text-align: center; max-width: 720px; margin: 0 auto; }
+.comp-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 12px 0 16px; }
+.comp-hero p { color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 560px; margin: 0 auto; }
+
+.comp-form { max-width: 880px; margin: 48px auto 0; padding: 0 24px; display: grid; grid-template-columns: 1fr 64px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 720px) { .comp-form { grid-template-columns: 1fr; } .comp-divider { text-align: center; } }
+.person-card { background: var(--ink2); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+.person-card h3 { font-family: 'Crimson Text', serif; color: var(--gold); font-size: 1.1rem; margin-bottom: 20px; text-align: center; }
+.comp-divider { display: flex; align-items: center; justify-content: center; padding-top: 80px; font-family: 'Crimson Text', serif; font-size: 2rem; color: var(--gold); }
+@media (max-width: 720px) { .comp-divider { padding: 0; } }
+
+.comp-result { max-width: 720px; margin: 48px auto; padding: 0 24px; display: none; }
+.comp-result.visible { display: block; }
+.score-card { background: var(--ink2); border: 1.5px solid var(--gold); border-radius: 16px; padding: 40px; text-align: center; }
+.score-number { font-family: 'Crimson Text', serif; font-size: 4.5rem; color: var(--gold); line-height: 1; margin: 12px 0; font-weight: 500; }
+.score-label { font-family: 'Crimson Text', serif; font-style: italic; font-size: 1.3rem; color: var(--text); margin-top: 8px; }
+.score-desc { color: var(--muted); margin-top: 16px; font-size: 15px; line-height: 1.7; }
+
+.detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+@media (max-width: 600px) { .detail-grid { grid-template-columns: 1fr; } }
+.detail-card { background: var(--ink2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+.detail-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.detail-value { font-family: 'Crimson Text', serif; font-size: 1.5rem; color: var(--text); margin-bottom: 4px; }
+.detail-sub { font-size: 0.85rem; color: var(--muted); }
+
+.field { margin-bottom: 16px; }
+.field-label { display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 500; }
+.field-input { width: 100%; padding: 12px 14px; background: var(--gold-faint); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: 'Crimson Text', serif; transition: border 120ms; }
+.field-input:focus { border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px var(--gold-wash); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Numerology Compatibility Calculator",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "description": "Free numerology compatibility tool. Compare two birth dates to score relational harmony across Pythagorean, Chaldean, and Vedic systems."
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+  <nav class="site-nav">
+    <a href="../index.html">Calculator</a>
+    <a href="numerology.html">Numerology</a>
+    <a href="angel-numbers.html">Angel Numbers</a>
+    <a href="blog.html">Blog</a>
+    <a href="/pages/remedies.html">Remedies</a>
+        <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a href="login.html" class="header-cta">Sign in</a>
+</header>
+
+<main>
+
+<section class="comp-hero">
+  <div class="eye">Compatibility</div>
+  <h1>How compatible are <em>two souls?</em></h1>
+  <p>Compare life path numbers across three numerology systems. Works for love, friendship, business partnerships, or any relationship you want to understand better.</p>
+</section>
+
+<div class="comp-form">
+  <div class="person-card">
+    <h3>First person</h3>
+    <div class="field">
+      <label class="field-label" for="name-a">Full name</label>
+      <input type="text" class="field-input" id="name-a" placeholder="e.g. Priya Sharma">
+    </div>
+    <div class="field">
+      <label class="field-label" for="dob-a">Date of birth</label>
+      <input type="date" class="field-input" id="dob-a">
+    </div>
+  </div>
+
+  <div class="comp-divider">&amp;</div>
+
+  <div class="person-card">
+    <h3>Second person</h3>
+    <div class="field">
+      <label class="field-label" for="name-b">Full name</label>
+      <input type="text" class="field-input" id="name-b" placeholder="e.g. Rahul Mehta">
+    </div>
+    <div class="field">
+      <label class="field-label" for="dob-b">Date of birth</label>
+      <input type="date" class="field-input" id="dob-b">
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:28px;">
+  <button class="btn btn-primary btn-lg" onclick="checkCompatibility()">Check compatibility →</button>
+</div>
+
+<div class="comp-result" id="comp-result">
+  <div class="score-card">
+    <div class="eye">Overall harmony</div>
+    <div class="score-number" id="score-num">—</div>
+    <div class="score-label" id="score-label">—</div>
+    <div class="score-desc" id="score-desc">—</div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="detail-card">
+      <div class="detail-label">Life path</div>
+      <div class="detail-value"><span id="lp-a">—</span> &amp; <span id="lp-b">—</span></div>
+      <div class="detail-sub" id="lp-match">—</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-label">Destiny</div>
+      <div class="detail-value"><span id="d-a">—</span> &amp; <span id="d-b">—</span></div>
+      <div class="detail-sub" id="d-match">—</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-label">Vedic Moolank</div>
+      <div class="detail-value"><span id="m-a">—</span> &amp; <span id="m-b">—</span></div>
+      <div class="detail-sub" id="m-match">—</div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px;padding:24px;background:var(--gold-faint);border:1px solid var(--border);border-radius:12px;">
+    <p style="color:var(--muted);line-height:1.8;font-size:15px" id="comp-insight">—</p>
+  </div>
+</div>
+
+<section style="max-width: 720px; margin: 80px auto 0; padding: 0 24px;">
+  <h2 style="font-family: 'Crimson Text', serif; color: var(--text); font-size: 2rem; text-align: center; margin-bottom: 24px;">Understanding <em style="color:var(--gold);font-style:italic">compatibility scores</em></h2>
+  <div style="color: var(--muted); line-height: 1.8; font-size: 15px;">
+    <p>Numerology compatibility isn't a simple pass/fail. Two very different numbers can create a dynamic, growth-oriented relationship — while two identical numbers can feel suffocating.</p>
+    <p>Our algorithm looks at three layers:</p>
+    <ul style="margin: 16px 0 16px 20px;">
+      <li><strong style="color:var(--text)">Life path compatibility</strong> — how well your core journeys align.</li>
+      <li><strong style="color:var(--text)">Destiny harmony</strong> — how your ultimate goals interact.</li>
+      <li><strong style="color:var(--text)">Vedic planetary friendship</strong> — whether your ruling planets are friends, neutrals, or enemies in Vedic astrology.</li>
+    </ul>
+    <p>The overall score combines these with weightings from classical numerology texts. Higher scores indicate more natural ease; lower scores indicate more friction — which isn't automatically bad, just more growth-demanding.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+      <p>Ancient numerology for the modern world.</p>
+    </div>
+    <div class="footer-col"><h4>Tools</h4><ul><li><a href="../index.html">Calculator</a></li><li><a href="results.html">Full reading</a></li><li><a href="auspicious.html">Auspicious dates</a></li></ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul><li><a href="numerology.html">Life paths</a></li><li><a href="angel-numbers.html">Angel numbers</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Account</h4><ul><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Numerastra</span><span style="display:flex;gap:16px"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span></div>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script>
+// Planetary friendships (Vedic)
+const PLANET_FRIENDSHIP = {
+  1: { friends: [3, 5, 9], neutral: [2, 4, 7], enemies: [6, 8] },
+  2: { friends: [1, 4, 7], neutral: [3, 5, 9], enemies: [6, 8] },
+  3: { friends: [1, 2, 9], neutral: [5, 7, 6], enemies: [4, 8] },
+  4: { friends: [5, 6, 8], neutral: [2, 7, 9], enemies: [1, 3] },
+  5: { friends: [1, 3, 6], neutral: [4, 7, 9], enemies: [2, 8] },
+  6: { friends: [4, 5, 8], neutral: [3, 7, 9], enemies: [1, 2] },
+  7: { friends: [2, 4, 9], neutral: [1, 3, 5], enemies: [6, 8] },
+  8: { friends: [4, 5, 6], neutral: [9, 1, 7], enemies: [2, 3] },
+  9: { friends: [1, 2, 3], neutral: [5, 7, 8], enemies: [4, 6] },
+};
+
+function checkCompatibility() {
+  const na = document.getElementById('name-a').value.trim();
+  const nb = document.getElementById('name-b').value.trim();
+  const da = document.getElementById('dob-a').value;
+  const db = document.getElementById('dob-b').value;
+  if (!na || !nb || !da || !db) { alert('Please fill in both names and dates of birth'); return; }
+
+  const a = Numerastra.calcAll(na, da);
+  const b = Numerastra.calcAll(nb, db);
+
+  let score = 0;
+
+  // Life path compatibility (40 points max)
+  const lpDiff = Math.abs(a.pythagorean.lifePath - b.pythagorean.lifePath);
+  if (a.pythagorean.lifePath === b.pythagorean.lifePath) score += 30;
+  else if (lpDiff <= 2) score += 35;
+  else if (lpDiff <= 4) score += 25;
+  else score += 15;
+
+  // Destiny compatibility (30 points max)
+  const dDiff = Math.abs(a.chaldean.destiny - b.chaldean.destiny);
+  if (dDiff === 0) score += 22;
+  else if (dDiff <= 2) score += 28;
+  else if (dDiff <= 4) score += 18;
+  else score += 10;
+
+  // Planetary friendship (30 points max)
+  const ma = a.vedic.moolank, mb = b.vedic.moolank;
+  const friends = PLANET_FRIENDSHIP[ma]?.friends || [];
+  const enemies = PLANET_FRIENDSHIP[ma]?.enemies || [];
+  let planetScore, planetLabel;
+  if (friends.includes(mb) || ma === mb) { planetScore = 28; planetLabel = 'Friendly'; }
+  else if (enemies.includes(mb)) { planetScore = 10; planetLabel = 'Challenged'; }
+  else { planetScore = 18; planetLabel = 'Neutral'; }
+  score += planetScore;
+
+  // Normalise & display
+  score = Math.min(100, Math.round(score));
+  document.getElementById('score-num').textContent = score + '%';
+  let label, desc;
+  if (score >= 80) {
+    label = 'Exceptional harmony';
+    desc = 'Your numbers align beautifully across all three systems. This is a rare and potent combination — treasure it.';
+  } else if (score >= 65) {
+    label = 'Strong compatibility';
+    desc = 'Strong natural alignment. You bring out the best in each other, with enough difference to keep things interesting.';
+  } else if (score >= 50) {
+    label = 'Balanced — with work';
+    desc = 'Good foundation with some friction points. Conscious communication will be essential; the growth potential is high.';
+  } else if (score >= 35) {
+    label = 'Growth-demanding';
+    desc = 'You\'re on quite different wavelengths. This relationship will stretch both of you — and that can be transformative if you\'re committed.';
+  } else {
+    label = 'Highly challenging';
+    desc = 'Numerologically quite different. This combination requires exceptional self-awareness and intentional effort on both sides.';
+  }
+  document.getElementById('score-label').textContent = label;
+  document.getElementById('score-desc').textContent = desc;
+
+  document.getElementById('lp-a').textContent = a.pythagorean.lifePath;
+  document.getElementById('lp-b').textContent = b.pythagorean.lifePath;
+  document.getElementById('lp-match').textContent = lpDiff === 0 ? 'Identical path' : (lpDiff <= 2 ? 'Harmonious' : (lpDiff <= 4 ? 'Complementary' : 'Contrasting'));
+
+  document.getElementById('d-a').textContent = a.chaldean.destiny;
+  document.getElementById('d-b').textContent = b.chaldean.destiny;
+  document.getElementById('d-match').textContent = dDiff <= 2 ? 'Aligned goals' : (dDiff <= 4 ? 'Different angles' : 'Divergent');
+
+  document.getElementById('m-a').textContent = a.vedic.moolank;
+  document.getElementById('m-b').textContent = b.vedic.moolank;
+  document.getElementById('m-match').textContent = planetLabel + ' planets';
+
+  document.getElementById('comp-insight').textContent =
+    `${a.name} (life path ${a.pythagorean.lifePath}) and ${b.name} (life path ${b.pythagorean.lifePath}) share a ${label.toLowerCase()} connection. Their Vedic planetary relationship is ${planetLabel.toLowerCase()}, meaning day-to-day rhythm ${planetLabel === 'Friendly' ? 'flows naturally' : planetLabel === 'Neutral' ? 'requires some adjustment' : 'needs conscious effort'}. For deeper analysis including soul urge and personality compatibility, upgrade to Pro.`;
+
+  document.getElementById('comp-result').classList.add('visible');
+  document.getElementById('comp-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</body>
+</html>

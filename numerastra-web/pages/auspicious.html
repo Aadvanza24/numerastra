@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auspicious Date Finder — Numerastra</title>
+<meta name="description" content="Find the most auspicious dates for important events using Vedic numerology. Weddings, business launches, property purchases, travel — aligned with your…">
+<link rel="canonical" href="https://numerastra.com/pages/auspicious.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Auspicious Date Finder">
+<meta property="og:description" content="Find the most auspicious dates for important events using Vedic numerology. Weddings, business launches, property purchases, travel — aligned with your personal numbers.">
+<meta property="og:url" content="https://numerastra.com/pages/auspicious.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auspicious Date Finder">
+<meta name="twitter:description" content="Find the most auspicious dates for important events using Vedic numerology. Weddings, business launches, property purchases, travel — aligned with your personal numbers.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+.ausp-hero { padding: 72px 24px 32px; text-align: center; max-width: 720px; margin: 0 auto; }
+.ausp-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 12px 0 16px; }
+.ausp-hero p { color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 560px; margin: 0 auto; }
+
+.ausp-form { max-width: 640px; margin: 48px auto; padding: 24px; background: var(--ink2); border: 1px solid var(--border); border-radius: 16px; }
+.field { margin-bottom: 16px; }
+.field-label { display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 500; }
+.field-input, .field-select { width: 100%; padding: 12px 14px; background: var(--gold-faint); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: 'Crimson Text', serif; transition: border 120ms; }
+.field-input:focus, .field-select:focus { border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px var(--gold-wash); }
+.field-select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(-45deg, transparent 50%, var(--gold) 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 36px; cursor: pointer; }
+.field-select option { background: var(--ink); color: var(--text); }
+
+.ausp-result { max-width: 720px; margin: 48px auto; padding: 0 24px; display: none; }
+.ausp-result.visible { display: block; }
+
+.date-list { display: grid; gap: 12px; margin-top: 24px; }
+.date-card { background: var(--ink2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; transition: border-color 120ms; }
+.date-card:hover { border-color: var(--gold); }
+.date-card.premium { border: 1.5px solid var(--gold); background: linear-gradient(to right, var(--gold-faint), var(--ink2)); }
+.date-num { font-family: 'Crimson Text', serif; font-size: 2rem; color: var(--gold); line-height: 1; text-align: center; min-width: 48px; font-weight: 500; }
+.date-info { flex: 1; }
+.date-info-main { font-family: 'Crimson Text', serif; font-size: 1.1rem; color: var(--text); }
+.date-info-sub { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
+.date-score { font-family: 'Crimson Text', serif; font-size: 1.5rem; color: var(--gold); }
+
+.info-box { max-width: 640px; margin: 40px auto; padding: 24px; background: var(--gold-faint); border: 1px solid var(--border); border-radius: 12px; color: var(--muted); line-height: 1.7; font-size: 15px; }
+.info-box strong { color: var(--text); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+  <nav class="site-nav">
+    <a href="../index.html">Calculator</a>
+    <a href="numerology.html">Numerology</a>
+    <a href="angel-numbers.html">Angel Numbers</a>
+    <a href="blog.html">Blog</a>
+    <a href="/pages/remedies.html">Remedies</a>
+        <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a href="login.html" class="header-cta">Sign in</a>
+</header>
+
+<main>
+
+<section class="ausp-hero">
+  <div class="eye">Auspicious dates</div>
+  <h1>Find your <em>most aligned</em> dates</h1>
+  <p>For weddings, business launches, property registration, travel, or any important commitment. We cross-check your personal numbers against the universal day number to find dates where the cosmic and numerological rhythms align.</p>
+</section>
+
+<div class="ausp-form">
+  <div class="field">
+    <label class="field-label" for="ausp-name">Your full name</label>
+    <input type="text" class="field-input" id="ausp-name" placeholder="e.g. Priya Sharma">
+  </div>
+  <div class="field">
+    <label class="field-label" for="ausp-dob">Your date of birth</label>
+    <input type="date" class="field-input" id="ausp-dob">
+  </div>
+  <div class="field">
+    <label class="field-label" for="ausp-event">Event type</label>
+    <select class="field-select" id="ausp-event">
+      <option value="general">General auspicious day</option>
+      <option value="wedding">Wedding / marriage</option>
+      <option value="business">Business launch or agreement</option>
+      <option value="property">Property purchase or registration</option>
+      <option value="travel">Travel or relocation</option>
+      <option value="financial">Financial investment</option>
+      <option value="medical">Medical procedure</option>
+    </select>
+  </div>
+  <div class="field">
+    <label class="field-label" for="ausp-window">Search window</label>
+    <select class="field-select" id="ausp-window">
+      <option value="30">Next 30 days</option>
+      <option value="60">Next 60 days</option>
+      <option value="90">Next 90 days</option>
+    </select>
+  </div>
+  <button class="btn btn-primary btn-block" onclick="findDates()">Find auspicious dates →</button>
+</div>
+
+<div class="info-box">
+  <p><strong>How this works:</strong> Vedic numerology considers a day auspicious when the universal day number harmonises with your moolank (psychic number, from birth day) and bhagyank (destiny number). Event type also matters — different numbers rule different domains. Wedding numbers differ from business numbers.</p>
+</div>
+
+<div class="ausp-result" id="ausp-result">
+  <h2 style="font-family: 'Crimson Text', serif; color: var(--text); font-size: 1.8rem; text-align: center;">Your top <em style="color:var(--gold);font-style:italic">auspicious dates</em></h2>
+  <p style="color: var(--muted); text-align: center; margin-top: 8px;" id="ausp-summary">—</p>
+  <div class="date-list" id="date-list"></div>
+
+  <div style="margin-top: 32px; padding: 24px; background: var(--gold-faint); border: 1px solid var(--border); border-radius: 12px; text-align: center;">
+    <p style="color: var(--muted); margin-bottom: 16px;">Want a year-round calendar with 50+ premium dates and personal month-by-month guidance?</p>
+    <a href="pricing.html" class="btn btn-ghost">See Pro features →</a>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+      <p>Ancient numerology for the modern world.</p>
+    </div>
+    <div class="footer-col"><h4>Tools</h4><ul><li><a href="../index.html">Calculator</a></li><li><a href="compatibility.html">Compatibility</a></li><li><a href="results.html">Full reading</a></li></ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul><li><a href="numerology.html">Life paths</a></li><li><a href="angel-numbers.html">Angel numbers</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Account</h4><ul><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Numerastra</span><span style="display:flex;gap:16px"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span></div>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script>
+// Domain-specific favourable numbers
+const EVENT_NUMBERS = {
+  general:   { best: [1, 3, 6, 9], avoid: [4, 8] },
+  wedding:   { best: [2, 6, 9], avoid: [4, 5, 8] },
+  business:  { best: [1, 3, 5, 8], avoid: [4, 7] },
+  property:  { best: [4, 8, 6], avoid: [5, 2] },
+  travel:    { best: [3, 5, 9], avoid: [4, 8] },
+  financial: { best: [5, 8, 1], avoid: [3, 7] },
+  medical:   { best: [1, 2, 9], avoid: [4, 5, 7] },
+};
+
+function findDates() {
+  const name = document.getElementById('ausp-name').value.trim();
+  const dob = document.getElementById('ausp-dob').value;
+  const event = document.getElementById('ausp-event').value;
+  const windowDays = Number(document.getElementById('ausp-window').value);
+
+  if (!name || !dob) { alert('Please enter your name and date of birth'); return; }
+
+  const me = Numerastra.calcAll(name, dob);
+  const favour = EVENT_NUMBERS[event];
+  const myMoolank = me.vedic.moolank;
+  const myBhagyank = me.vedic.bhagyank;
+
+  const today = new Date();
+  const dates = [];
+
+  for (let i = 1; i <= windowDays; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    const dayNum = Numerastra.reduce(d.getDate(), false);
+    const fullNum = Numerastra.reduce(d.getDate() + (d.getMonth() + 1) + d.getFullYear(), false);
+
+    let score = 0;
+    if (favour.best.includes(dayNum)) score += 3;
+    if (favour.avoid.includes(dayNum)) score -= 3;
+    if (favour.best.includes(fullNum)) score += 2;
+    if (favour.avoid.includes(fullNum)) score -= 2;
+    if (dayNum === myMoolank) score += 4;
+    if (fullNum === myBhagyank) score += 3;
+    if (dayNum === myBhagyank) score += 2;
+
+    if (score > 0) dates.push({ date: d, dayNum, fullNum, score });
+  }
+
+  dates.sort((a, b) => b.score - a.score);
+  const top = dates.slice(0, 8);
+
+  const list = document.getElementById('date-list');
+  list.innerHTML = '';
+
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  top.forEach((d, idx) => {
+    const el = document.createElement('div');
+    el.className = 'date-card' + (idx < 2 ? ' premium' : '');
+    el.innerHTML = `
+      <div class="date-num">${d.date.getDate()}</div>
+      <div class="date-info">
+        <div class="date-info-main">${dayNames[d.date.getDay()]}, ${d.date.getDate()} ${months[d.date.getMonth()]} ${d.date.getFullYear()}</div>
+        <div class="date-info-sub">Day number ${d.dayNum} · Full date number ${d.fullNum}</div>
+      </div>
+      <div class="date-score">${idx < 2 ? '★' : ''}${d.score}</div>
+    `;
+    list.appendChild(el);
+  });
+
+  const summary = document.getElementById('ausp-summary');
+  summary.textContent = top.length
+    ? `Found ${top.length} favourable dates in the next ${windowDays} days. Starred entries are premium — strongest alignment with your personal numbers.`
+    : 'No strongly auspicious dates found in this window. Try expanding the search or choosing a different event type.';
+
+  document.getElementById('ausp-result').classList.add('visible');
+  document.getElementById('ausp-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</body>
+</html>

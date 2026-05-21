@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Your full reading — Numerastra</title>
+<meta name="description" content="Your complete numerology reading — all 11 tools, three ancient systems, one personal synthesis.">
+<link rel="canonical" href="https://numerastra.com/pages/results.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your full reading">
+<meta property="og:description" content="Your complete numerology reading — all 11 tools, three ancient systems, one personal synthesis.">
+<meta property="og:url" content="https://numerastra.com/pages/results.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your full reading">
+<meta name="twitter:description" content="Your complete numerology reading — all 11 tools, three ancient systems, one personal synthesis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<style>
+.results-header {
+  background: var(--indigo-2); border-bottom: 1px solid var(--gold-line);
+  padding: var(--s-5) 0;
+}
+.results-title-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--s-3);
+}
+.profile-summary {
+  display: flex; align-items: center; gap: var(--s-4);
+}
+.profile-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--gold); color: var(--indigo);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
+}
+.profile-name { font-family: var(--serif); font-size: 1.15rem; color: var(--ivory); }
+.profile-dob { font-size: 0.85rem; color: var(--ivory-dimmer); margin-top: 2px; }
+
+.nav-tabs {
+  display: flex; overflow-x: auto; gap: var(--s-4);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--gold-line);
+  scrollbar-width: thin;
+}
+.nav-tabs::-webkit-scrollbar { height: 3px; }
+.nav-tabs::-webkit-scrollbar-thumb { background: var(--gold-line); border-radius: 2px; }
+.nav-tab {
+  flex-shrink: 0;
+  padding: var(--s-2) 0;
+  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ivory-dimmer); cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: all var(--t-fast);
+}
+.nav-tab:hover { color: var(--ivory-dim); }
+.nav-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.panel { display: none; padding: var(--s-6) 0; }
+.panel.active { display: block; animation: fadeIn var(--t-base) var(--ease) both; }
+.panel-head { margin-bottom: var(--s-6); text-align: center; }
+.panel-eye { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+.panel-head h2 { margin-top: var(--s-2); }
+.panel-head p { max-width: 560px; margin: var(--s-3) auto 0; color: var(--ivory-dim); }
+
+.num-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4);
+}
+@media (max-width: 820px) { .num-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .num-grid { grid-template-columns: 1fr; } }
+
+.insight {
+  background: rgba(62, 207, 184, 0.05);
+  border-left: 2px solid var(--success);
+  padding: var(--s-4) var(--s-5);
+  margin: var(--s-5) 0;
+  font-style: italic; font-family: var(--serif);
+  color: var(--ivory-dim); line-height: 1.6;
+}
+.insight strong { color: var(--success); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--s-2); }
+
+.ai-teaser {
+  background: var(--indigo-2); border: 1.5px dashed var(--gold);
+  border-radius: var(--r-lg); padding: var(--s-6);
+  text-align: center; margin-top: var(--s-6);
+}
+.ai-teaser h3 { margin-bottom: var(--s-3); }
+.ai-teaser p { color: var(--ivory-dim); max-width: 460px; margin: 0 auto var(--s-4); }
+
+.no-calc {
+  text-align: center; padding: var(--s-9) 0;
+}
+.no-calc h2 { margin-bottom: var(--s-4); }
+.no-calc p { color: var(--ivory-dim); max-width: 480px; margin: 0 auto var(--s-5); }
+
+.biorhythm-bar {
+  background: var(--indigo-3); border-radius: 100px;
+  height: 8px; position: relative; overflow: hidden;
+  margin: var(--s-2) 0;
+}
+.biorhythm-fill {
+  position: absolute; top: 0; bottom: 0;
+  background: var(--gold); border-radius: 100px;
+  transition: width var(--t-slow);
+}
+.biorhythm-row {
+  display: grid; grid-template-columns: 120px 1fr 60px;
+  align-items: center; gap: var(--s-3);
+  padding: var(--s-3) 0; border-bottom: 1px solid var(--gold-line);
+  font-size: 0.9rem;
+}
+.biorhythm-label { color: var(--ivory-dim); }
+.biorhythm-value { color: var(--gold); font-family: var(--serif); font-weight: 500; text-align: right; }
+
+.loshu-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2);
+  max-width: 320px; margin: var(--s-5) auto;
+}
+.loshu-cell {
+  aspect-ratio: 1; border: 1px solid var(--gold-line); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.75rem; color: var(--ivory);
+  background: var(--indigo-2);
+}
+.loshu-cell.filled { background: var(--gold-wash); color: var(--gold); border-color: var(--gold); }
+.loshu-cell.missing { color: var(--ivory-dimmer); background: transparent; opacity: 0.4; }
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="brand">
+        <span class="brand-mark"></span>
+        <span>Numer<span style="color:var(--gold);">astra</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Calculator</a>
+        <a href="/numerology/">Numerology</a>
+        <a href="/angel-numbers/">Angel numbers</a>
+        <a href="/blog/">Blog</a>
+        <a href="/pages/pricing.html">Pricing</a>
+      </div>
+      <div class="nav-cta">
+        <a href="/pages/login.html" class="btn-signin">Sign in</a>
+      </div>
+      <button class="nav-mobile-toggle" aria-label="Toggle menu">☰</button>
+    </nav>
+    <div class="nav-mobile-menu">
+      <a href="/">Calculator</a>
+      <a href="/numerology/">Numerology</a>
+      <a href="/angel-numbers/">Angel numbers</a>
+      <a href="/blog/">Blog</a>
+      <a href="/pages/pricing.html">Pricing</a>
+      <a href="/pages/login.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- Accessible H1 (visually hidden, populated by JS with user's name) -->
+<h1 class="sr-only" id="results-h1">Your numerology reading</h1>
+
+<!-- Empty state — no calculation yet -->
+<div id="no-calc" class="no-calc" style="display:none;">
+  <div class="container-narrow">
+    <div style="width: 56px; height: 56px; border: 1.5px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; color: var(--gold); margin: 0 auto var(--s-4);">N</div>
+    <h2>Your reading isn't ready yet</h2>
+    <p>Head back to the calculator and enter your name and date of birth. Takes about two minutes.</p>
+    <a href="/" class="btn btn-primary btn-lg">Start my reading →</a>
+  </div>
+</div>
+
+<!-- Full reading -->
+<div id="reading-view" style="display:none;">
+
+<div class="results-header">
+  <div class="container">
+    <div class="results-title-row">
+      <div class="profile-summary">
+        <div class="profile-avatar" id="profile-initials">—</div>
+        <div>
+          <div class="profile-name" id="profile-name">—</div>
+          <div class="profile-dob" id="profile-dob">—</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: var(--s-3);">
+        <a href="/" class="btn btn-ghost btn-sm">Recalculate</a>
+        <a href="/pages/pricing.html" class="btn btn-primary btn-sm">Unlock full report →</a>
+      </div>
+    </div>
+
+    <div class="nav-tabs" id="tabs">
+      <div class="nav-tab active" data-tab="synthesis">Synthesis</div>
+      <div class="nav-tab" data-tab="pythagorean">Pythagorean</div>
+      <div class="nav-tab" data-tab="chaldean">Chaldean</div>
+      <div class="nav-tab" data-tab="vedic">Vedic</div>
+      <div class="nav-tab" data-tab="biorhythm">Biorhythm</div>
+      <div class="nav-tab" data-tab="loshu">Lo Shu grid</div>
+      <div class="nav-tab" data-tab="personal">Personal year</div>
+      <div class="nav-tab" data-tab="astro">Astro</div>
+      <div class="nav-tab" data-tab="ai">✧ Ask Numerastra</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SYNTHESIS -->
+  <div class="panel active" id="panel-synthesis">
+    <div class="panel-head">
+      <p class="panel-eye">Synthesis</p>
+      <h2>Where all three systems <em>agree</em></h2>
+      <p>The most reliable numerological signal comes from cross-system agreement. Here's yours.</p>
+    </div>
+
+    <div class="result-hero" style="max-width: 560px; margin: 0 auto var(--s-6); text-align: center; padding: var(--s-6) var(--s-4); background: var(--indigo-2); border: 1.5px solid var(--gold); border-radius: var(--r-xl);">
+      <div style="font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ivory-dim);">Dominant number</div>
+      <div style="font-family: var(--serif); font-size: 5rem; font-weight: 500; color: var(--gold); line-height: 1; margin: var(--s-3) 0;" id="syn-num">—</div>
+      <div style="display: inline-block; padding: 4px 14px; border-radius: 100px; background: rgba(62,207,184,0.1); color: var(--success); font-size: 0.75rem;" id="syn-conf">—</div>
+      <div style="font-family: var(--serif); font-style: italic; color: var(--ivory); font-size: 1.5rem; margin-top: var(--s-4); line-height: 1.3;" id="syn-title">—</div>
+      <div style="color: var(--ivory-dim); margin-top: var(--s-2); font-size: 0.95rem;" id="syn-theme">—</div>
+    </div>
+
+    <div class="num-grid">
+      <div class="num-card">
+        <div class="num-card-label">Pythagorean</div>
+        <div class="num-card-value" id="syn-pyth">—</div>
+        <div class="num-card-meaning">Life path</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Chaldean</div>
+        <div class="num-card-value" id="syn-chal">—</div>
+        <div class="num-card-meaning">Destiny</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Vedic</div>
+        <div class="num-card-value" id="syn-ved">—</div>
+        <div class="num-card-meaning">Bhagyank</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Zodiac</div>
+        <div class="num-card-value" style="font-size: 1.5rem; padding-top: 14px;" id="syn-zod">—</div>
+        <div class="num-card-meaning" id="syn-ruler">—</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>What this means</strong>
+      <span id="syn-insight">—</span>
+    </div>
+
+    <div class="ai-teaser">
+      <p class="eyebrow">Unlock personalised guidance</p>
+      <h3 style="margin-top: var(--s-3);">Ask the AI about your <em>numbers</em></h3>
+      <p>Get specific answers: why these numbers, what to do about them, how they affect relationships, career, and timing.</p>
+      <a href="/pages/pricing.html" class="btn btn-primary">See Pro features →</a>
+    </div>
+  </div>
+
+  <!-- PYTHAGOREAN -->
+  <div class="panel" id="panel-pythagorean">
+    <div class="panel-head">
+      <p class="panel-eye">Pythagorean system</p>
+      <h2>Your <em>Western</em> numerology profile</h2>
+      <p>Originating with Pythagoras. Letters A–Z map to digits 1–9. Calculates your four core numbers.</p>
+    </div>
+
+    <div class="num-grid">
+      <div class="num-card">
+        <div class="num-card-label">Life path</div>
+        <div class="num-card-value" id="pyth-lp">—</div>
+        <div class="num-card-meaning">From your DOB</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Expression</div>
+        <div class="num-card-value" id="pyth-ex">—</div>
+        <div class="num-card-meaning">From your full name</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Soul urge</div>
+        <div class="num-card-value" id="pyth-su">—</div>
+        <div class="num-card-meaning">From vowels in name</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Personality</div>
+        <div class="num-card-value" id="pyth-pe">—</div>
+        <div class="num-card-meaning">From consonants</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>Interpretation</strong>
+      <span id="pyth-insight">—</span>
+    </div>
+  </div>
+
+  <!-- CHALDEAN -->
+  <div class="panel" id="panel-chaldean">
+    <div class="panel-head">
+      <p class="panel-eye">Chaldean system</p>
+      <h2>The <em>Babylonian</em> signature</h2>
+      <p>Considered the most mystically accurate by Cheiro. Different letter-number mapping than Pythagorean.</p>
+    </div>
+
+    <div class="num-grid">
+      <div class="num-card">
+        <div class="num-card-label">Psychic</div>
+        <div class="num-card-value" id="chal-psy">—</div>
+        <div class="num-card-meaning">From birth day</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Destiny</div>
+        <div class="num-card-value" id="chal-dest">—</div>
+        <div class="num-card-meaning">From full DOB</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Name vibration</div>
+        <div class="num-card-value" id="chal-name">—</div>
+        <div class="num-card-meaning">From full name</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Harmony</div>
+        <div class="num-card-value" style="font-size: 1.25rem; padding-top: 18px;" id="chal-harm">—</div>
+        <div class="num-card-meaning">Name vs destiny</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>Interpretation</strong>
+      <span id="chal-insight">—</span>
+    </div>
+  </div>
+
+  <!-- VEDIC -->
+  <div class="panel" id="panel-vedic">
+    <div class="panel-head">
+      <p class="panel-eye">Vedic Ankashastra</p>
+      <h2>Numbers ruled by the <em>nine planets</em></h2>
+      <p>Rooted in the Vedas. Each number links to a planetary ruler with specific energies, colours, gems, and mantras.</p>
+    </div>
+
+    <div class="num-grid">
+      <div class="num-card">
+        <div class="num-card-label">Moolank</div>
+        <div class="num-card-value" id="ved-moo">—</div>
+        <div class="num-card-meaning" id="ved-moo-planet">—</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Bhagyank</div>
+        <div class="num-card-value" id="ved-bhag">—</div>
+        <div class="num-card-meaning" id="ved-bhag-planet">—</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Name number</div>
+        <div class="num-card-value" id="ved-namank">—</div>
+        <div class="num-card-meaning">From your name</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Compatibility</div>
+        <div class="num-card-value" style="font-size: 1.25rem; padding-top: 18px;" id="ved-compat">—</div>
+        <div class="num-card-meaning">Moolank ↔ Bhagyank</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>Planetary guidance</strong>
+      <span id="ved-insight">—</span>
+    </div>
+  </div>
+
+  <!-- BIORHYTHM -->
+  <div class="panel" id="panel-biorhythm">
+    <div class="panel-head">
+      <p class="panel-eye">Biorhythm today</p>
+      <h2>Your <em>energy cycles</em> right now</h2>
+      <p>Four cycles run from the day you were born. Where they peak or dip shapes how today feels.</p>
+    </div>
+
+    <div style="max-width: 600px; margin: 0 auto;">
+      <div class="biorhythm-row">
+        <div class="biorhythm-label">Physical · 23d</div>
+        <div class="biorhythm-bar"><div class="biorhythm-fill" id="bio-phys-bar"></div></div>
+        <div class="biorhythm-value" id="bio-phys">—</div>
+      </div>
+      <div class="biorhythm-row">
+        <div class="biorhythm-label">Emotional · 28d</div>
+        <div class="biorhythm-bar"><div class="biorhythm-fill" id="bio-emot-bar"></div></div>
+        <div class="biorhythm-value" id="bio-emot">—</div>
+      </div>
+      <div class="biorhythm-row">
+        <div class="biorhythm-label">Intellectual · 33d</div>
+        <div class="biorhythm-bar"><div class="biorhythm-fill" id="bio-intel-bar"></div></div>
+        <div class="biorhythm-value" id="bio-intel">—</div>
+      </div>
+      <div class="biorhythm-row">
+        <div class="biorhythm-label">Intuitive · 38d</div>
+        <div class="biorhythm-bar"><div class="biorhythm-fill" id="bio-intu-bar"></div></div>
+        <div class="biorhythm-value" id="bio-intu">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LO SHU -->
+  <div class="panel" id="panel-loshu">
+    <div class="panel-head">
+      <p class="panel-eye">Lo Shu grid</p>
+      <h2>Your <em>magic square</em></h2>
+      <p>Your birth date plotted on the ancient Chinese grid. Gold squares show numbers you have. Dimmed squares reveal missing numbers — the lessons you came to learn.</p>
+    </div>
+
+    <div class="loshu-grid" id="loshu-grid">
+      <div class="loshu-cell" data-pos="4">4</div>
+      <div class="loshu-cell" data-pos="9">9</div>
+      <div class="loshu-cell" data-pos="2">2</div>
+      <div class="loshu-cell" data-pos="3">3</div>
+      <div class="loshu-cell" data-pos="5">5</div>
+      <div class="loshu-cell" data-pos="7">7</div>
+      <div class="loshu-cell" data-pos="8">8</div>
+      <div class="loshu-cell" data-pos="1">1</div>
+      <div class="loshu-cell" data-pos="6">6</div>
+    </div>
+
+    <div class="insight">
+      <strong>Missing numbers</strong>
+      <span id="loshu-missing">—</span>
+    </div>
+  </div>
+
+  <!-- PERSONAL YEAR -->
+  <div class="panel" id="panel-personal">
+    <div class="panel-head">
+      <p class="panel-eye">Your year ahead</p>
+      <h2>Personal year <em>2026</em></h2>
+      <p>A 9-year cycle unique to you. Your personal year combined with the universal year shows the theme of the months ahead.</p>
+    </div>
+
+    <div class="num-grid" style="grid-template-columns: 1fr 1fr; max-width: 560px; margin: 0 auto;">
+      <div class="num-card">
+        <div class="num-card-label">Your personal year</div>
+        <div class="num-card-value" id="py-personal">—</div>
+        <div class="num-card-meaning" id="py-personal-theme">—</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Universal year 2026</div>
+        <div class="num-card-value">1</div>
+        <div class="num-card-meaning">New beginnings</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>This year's theme</strong>
+      <span id="py-insight">—</span>
+    </div>
+  </div>
+
+  <!-- ASTRO -->
+  <div class="panel" id="panel-astro">
+    <div class="panel-head">
+      <p class="panel-eye">Astro-numerology</p>
+      <h2>Where <em>stars meet numbers</em></h2>
+      <p>Your zodiac sign and its ruling planet, combined with your life path, shows how cosmic and numerical energies align.</p>
+    </div>
+
+    <div class="num-grid" style="grid-template-columns: 1fr 1fr; max-width: 560px; margin: 0 auto;">
+      <div class="num-card">
+        <div class="num-card-label">Zodiac sign</div>
+        <div class="num-card-value" style="font-size: 1.75rem; padding-top: 10px;" id="astro-sign">—</div>
+        <div class="num-card-meaning" id="astro-element">—</div>
+      </div>
+      <div class="num-card">
+        <div class="num-card-label">Ruling planet</div>
+        <div class="num-card-value" style="font-size: 1.75rem; padding-top: 10px;" id="astro-ruler">—</div>
+        <div class="num-card-meaning">Your cosmic guide</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <strong>Interpretation</strong>
+      <span id="astro-insight">—</span>
+    </div>
+  </div>
+
+  <!-- AI GUIDANCE -->
+  <div class="panel" id="panel-ai">
+    <div class="panel-head">
+      <p class="panel-eye">Ask Numerastra</p>
+      <h2>Personal guidance, grounded in <em>your numbers</em></h2>
+      <p>Ask anything about your reading — career, relationships, timing, remedies. Your question is answered in context of your complete profile.</p>
+    </div>
+
+    <!-- Unauthenticated state -->
+    <div id="ai-signin-gate" class="insight" style="text-align: center; display: none;">
+      <p style="margin-bottom: 16px;">Sign in to get personalised AI guidance on your numbers.</p>
+      <a href="/pages/login.html?redirect=%2Fpages%2Fresults.html" class="btn btn-primary">Sign in to ask</a>
+      <p class="muted" style="margin-top: 14px; font-size: 0.85rem;">Free tier: 2 questions · Pro: unlimited</p>
+    </div>
+
+    <!-- Authenticated ask form -->
+    <div id="ai-ask-panel" style="max-width: 720px; margin: 0 auto; display: none;">
+      <div id="ai-quota-banner" class="muted" style="margin-bottom: 14px; font-size: 0.88rem;"></div>
+
+      <textarea id="ai-question"
+        placeholder="e.g. What career suits my numbers? How will 2026 unfold for me? Is my name in harmony with my life path?"
+        maxlength="500"
+        style="width: 100%; min-height: 110px; padding: 16px; background: var(--indigo-2); border: 1px solid var(--gold-line); border-radius: 10px; color: var(--ivory); font-family: 'DM Sans', sans-serif; font-size: 1rem; line-height: 1.5; resize: vertical;"></textarea>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+        <span class="muted" style="font-size: 0.8rem;"><span id="ai-char-count">0</span> / 500</span>
+        <button id="ai-submit" class="btn btn-primary" onclick="askAIQuestion()">Ask ✧</button>
+      </div>
+
+      <!-- Answer slot -->
+      <div id="ai-answer" style="margin-top: 28px; display: none;">
+        <div class="insight" style="border-color: var(--gold); background: rgba(201,165,90,0.04);">
+          <strong style="display: block; margin-bottom: 10px; color: var(--gold);">Guidance</strong>
+          <div id="ai-answer-text" style="white-space: pre-wrap; line-height: 1.65; color: var(--ivory-dim);"></div>
+        </div>
+      </div>
+
+      <!-- Upgrade CTA appears when quota hit -->
+      <div id="ai-upgrade-cta" class="insight" style="margin-top: 24px; text-align: center; display: none; border-color: var(--gold);">
+        <p style="margin-bottom: 12px;"><strong>You've used your free questions.</strong></p>
+        <p class="muted" style="margin-bottom: 16px;">Upgrade to Pro for unlimited AI guidance on your numbers.</p>
+        <a href="/pages/pricing.html?plan=pro" class="btn btn-primary">Upgrade to Pro</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand-text">Numerastra</div>
+        <p class="muted" style="font-size: 0.85rem;">Decode the language of numbers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/">Calculator</a></li>
+          <li><a href="/pages/compatibility.html">Compatibility</a></li>
+          <li><a href="/pages/auspicious.html">Auspicious dates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/numerology/">Life paths</a></li>
+          <li><a href="/angel-numbers/">Angel numbers</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="/pages/pricing.html">Pricing</a></li>
+          <li><a href="/pages/login.html">Sign in</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Numerastra</div>
+      <div style="display: flex; gap: var(--s-4);">
+        <a href="/pages/privacy.html">Privacy</a>
+        <a href="/pages/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script>
+// Planetary rulers for Vedic numbers
+const PLANETS = {
+  1: { name: 'Sun',      quality: 'leadership, vitality' },
+  2: { name: 'Moon',     quality: 'intuition, nurturing' },
+  3: { name: 'Jupiter',  quality: 'wisdom, expansion' },
+  4: { name: 'Rahu',     quality: 'discipline, analysis' },
+  5: { name: 'Mercury',  quality: 'communication, agility' },
+  6: { name: 'Venus',    quality: 'beauty, harmony' },
+  7: { name: 'Ketu',     quality: 'introspection, spirituality' },
+  8: { name: 'Saturn',   quality: 'discipline, karma' },
+  9: { name: 'Mars',     quality: 'courage, passion' },
+};
+
+const ZODIAC_ELEMENTS = {
+  Aries: 'Fire · cardinal', Taurus: 'Earth · fixed', Gemini: 'Air · mutable',
+  Cancer: 'Water · cardinal', Leo: 'Fire · fixed', Virgo: 'Earth · mutable',
+  Libra: 'Air · cardinal', Scorpio: 'Water · fixed', Sagittarius: 'Fire · mutable',
+  Capricorn: 'Earth · cardinal', Aquarius: 'Air · fixed', Pisces: 'Water · mutable',
+};
+
+function initResults() {
+  const calc = Numerastra.loadCalculation();
+  if (!calc) {
+    document.getElementById('no-calc').style.display = 'block';
+    return;
+  }
+
+  document.getElementById('reading-view').style.display = 'block';
+
+  // Profile header
+  const initials = calc.name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  document.getElementById('profile-initials').textContent = initials;
+  document.getElementById('profile-name').textContent = calc.name;
+  document.getElementById('profile-dob').textContent = Numerastra.formatDOB(calc.dob);
+  // SEO: personalise the hidden H1
+  document.getElementById('results-h1').textContent = `${calc.name}'s numerology reading`;
+
+  // Synthesis
+  const dom = calc.synthesis.dominant;
+  const meaning = Numerastra.LP_MEANINGS[dom] || {};
+  document.getElementById('syn-num').textContent = dom;
+  document.getElementById('syn-title').textContent = meaning.title || '—';
+  document.getElementById('syn-theme').textContent = meaning.theme || '—';
+  document.getElementById('syn-conf').textContent =
+    calc.synthesis.confidence === 'very high' ? 'All 3 systems agree · very high' :
+    calc.synthesis.confidence === 'high' ? '2 of 3 systems agree · high' : 'Mixed signal';
+  document.getElementById('syn-pyth').textContent = calc.pythagorean.lifePath;
+  document.getElementById('syn-chal').textContent = calc.chaldean.destiny;
+  document.getElementById('syn-ved').textContent = calc.vedic.bhagyank;
+  document.getElementById('syn-zod').textContent = calc.zodiac.sign;
+  document.getElementById('syn-ruler').textContent = calc.zodiac.ruler;
+  document.getElementById('syn-insight').textContent =
+    `Your synthesis number ${dom} (${meaning.title}) emerges consistently across systems. ${meaning.theme}. This is your dominant frequency — the lens through which you experience life and through which others encounter you.`;
+
+  // Pythagorean
+  const p = calc.pythagorean;
+  document.getElementById('pyth-lp').textContent = p.lifePath;
+  document.getElementById('pyth-ex').textContent = p.expression;
+  document.getElementById('pyth-su').textContent = p.soulUrge;
+  document.getElementById('pyth-pe').textContent = p.personality;
+  document.getElementById('pyth-insight').textContent =
+    `Your life path ${p.lifePath} is the journey itself; your expression ${p.expression} is how you show up; your soul urge ${p.soulUrge} is what you secretly yearn for; your personality ${p.personality} is what others see first.`;
+
+  // Chaldean
+  const c = calc.chaldean;
+  document.getElementById('chal-psy').textContent = c.psychic;
+  document.getElementById('chal-dest').textContent = c.destiny;
+  document.getElementById('chal-name').textContent = c.name;
+  const harmonious = (c.name === c.destiny) ? 'Aligned' : (Math.abs(c.name - c.destiny) <= 2) ? 'Close' : 'Challenged';
+  document.getElementById('chal-harm').textContent = harmonious;
+  document.getElementById('chal-insight').textContent =
+    `Your psychic ${c.psychic} reveals how you see yourself; your destiny ${c.destiny} shows where your path leads; your name vibration ${c.name} is the frequency your name carries through the world. Their ${harmonious.toLowerCase()} relationship suggests ${harmonious === 'Aligned' ? 'your name is already tuned to your path' : harmonious === 'Close' ? 'small adjustments could create better flow' : 'a name correction may help align your frequency'}.`;
+
+  // Vedic
+  const v = calc.vedic;
+  document.getElementById('ved-moo').textContent = v.moolank;
+  document.getElementById('ved-bhag').textContent = v.bhagyank;
+  document.getElementById('ved-namank').textContent = Numerastra.chaldeanName(calc.name);
+  document.getElementById('ved-moo-planet').textContent = PLANETS[v.moolank]?.name || '—';
+  document.getElementById('ved-bhag-planet').textContent = PLANETS[v.bhagyank]?.name || '—';
+  const compat = v.moolank === v.bhagyank ? 'Twin fire' : (Math.abs(v.moolank - v.bhagyank) <= 2 ? 'Friendly' : 'Cross-current');
+  document.getElementById('ved-compat').textContent = compat;
+  document.getElementById('ved-insight').textContent =
+    `Your Moolank ${v.moolank} (${PLANETS[v.moolank]?.name}, ${PLANETS[v.moolank]?.quality}) governs your psyche. Your Bhagyank ${v.bhagyank} (${PLANETS[v.bhagyank]?.name}, ${PLANETS[v.bhagyank]?.quality}) governs your destiny. Honour both through the associated mantras, gemstones, and days.`;
+
+  // Biorhythm
+  const birthMs = new Date(calc.dob).getTime();
+  const daysSince = Math.floor((Date.now() - birthMs) / (1000 * 60 * 60 * 24));
+  const cycles = { phys: 23, emot: 28, intel: 33, intu: 38 };
+  for (const [key, days] of Object.entries(cycles)) {
+    const val = Math.sin(2 * Math.PI * daysSince / days);
+    const pct = Math.round(val * 100);
+    const pctStr = (pct > 0 ? '+' : '') + pct + '%';
+    document.getElementById(`bio-${key}`).textContent = pctStr;
+    const fill = document.getElementById(`bio-${key}-bar`);
+    const width = Math.abs(pct) / 2 + 50;
+    fill.style.width = width + '%';
+    fill.style.background = pct >= 0 ? 'var(--success)' : 'var(--warning)';
+  }
+
+  // Lo Shu
+  const { day, month, year } = Numerastra.parseDOB(calc.dob);
+  const digitsUsed = (String(day) + String(month) + String(year) + String(p.lifePath) + String(p.expression)).replace(/0/g, '').split('').map(Number);
+  const present = new Set(digitsUsed);
+  document.querySelectorAll('.loshu-cell').forEach(cell => {
+    const pos = Number(cell.dataset.pos);
+    cell.classList.remove('filled', 'missing');
+    if (present.has(pos)) cell.classList.add('filled');
+    else cell.classList.add('missing');
+  });
+  const missing = [];
+  for (let i = 1; i <= 9; i++) if (!present.has(i)) missing.push(i);
+  document.getElementById('loshu-missing').textContent =
+    missing.length ? `Your grid is missing ${missing.join(', ')}. These represent energies you came into this life to develop — lessons waiting for conscious attention.` : `You have all 9 numbers — a rare complete grid. This suggests you came into this life with a broad spectrum of capabilities.`;
+
+  // Personal year 2026
+  const py = Numerastra.reduce(day + month + 2026, false);
+  document.getElementById('py-personal').textContent = py;
+  const pyMeaning = Numerastra.LP_MEANINGS[py] || {};
+  document.getElementById('py-personal-theme').textContent = pyMeaning.title || '—';
+  document.getElementById('py-insight').textContent =
+    `Your personal year ${py} combined with universal year 1 (2026) creates a theme of ${pyMeaning.theme || 'new directions'}. This is a year to ${py === 1 ? 'plant seeds for the next 9-year cycle' : py === 9 ? 'complete, release, and prepare for renewal' : 'deepen your work on ' + pyMeaning.theme}.`;
+
+  // Astro
+  document.getElementById('astro-sign').textContent = calc.zodiac.sign;
+  document.getElementById('astro-element').textContent = ZODIAC_ELEMENTS[calc.zodiac.sign] || '—';
+  document.getElementById('astro-ruler').textContent = calc.zodiac.ruler;
+  document.getElementById('astro-insight').textContent =
+    `As a ${calc.zodiac.sign} (${ZODIAC_ELEMENTS[calc.zodiac.sign]}) ruled by ${calc.zodiac.ruler}, your astrological essence ${(PLANETS[p.lifePath]?.name === calc.zodiac.ruler) ? 'aligns perfectly with your numerological planet — a rare harmonic' : 'blends with your numerological ruler ' + (PLANETS[p.lifePath]?.name || '—') + ', creating a complex but rich personality signature'}.`;
+
+  // Tab switching
+  document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+      window.scrollTo({ top: document.querySelector('.nav-tabs').offsetTop - 100, behavior: 'smooth' });
+    });
+  });
+
+  // AI panel — gate on auth state
+  initAIPanel();
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   AI GUIDANCE PANEL
+   ═══════════════════════════════════════════════════════════════════ */
+
+function initAIPanel() {
+  const gate     = document.getElementById('ai-signin-gate');
+  const askPanel = document.getElementById('ai-ask-panel');
+  const quota    = document.getElementById('ai-quota-banner');
+
+  function render() {
+    const auth = window.Numerastra && window.Numerastra.auth;
+    if (!auth) return;
+    const user = auth.currentUser();
+    if (!auth.isLoggedIn() || !user) {
+      gate.style.display = 'block';
+      askPanel.style.display = 'none';
+      return;
+    }
+    gate.style.display = 'none';
+    askPanel.style.display = 'block';
+
+    // Quota messaging
+    if (user.tier === 'free') {
+      const used = user.freeQuestionsUsed || 0;
+      const limit = user.freeQuestionLimit || 2;
+      const remaining = Math.max(0, limit - used);
+      quota.innerHTML = `Free tier · <strong style="color:var(--gold)">${remaining}</strong> of ${limit} questions remaining. <a href="/pages/pricing.html?plan=pro" style="color:var(--gold)">Upgrade to Pro</a> for unlimited.`;
+    } else {
+      quota.innerHTML = `<strong style="color:var(--gold)">${user.tier}</strong> tier · Unlimited guidance ✨`;
+    }
+  }
+
+  // Initial render + react to auth changes
+  render();
+  if (window.Numerastra && window.Numerastra.auth) {
+    window.Numerastra.auth.onChange(render);
+  }
+
+  // Character counter
+  const qInput = document.getElementById('ai-question');
+  const counter = document.getElementById('ai-char-count');
+  qInput.addEventListener('input', () => {
+    counter.textContent = qInput.value.length;
+  });
+}
+
+async function askAIQuestion() {
+  const api  = window.Numerastra && window.Numerastra.api;
+  const auth = window.Numerastra && window.Numerastra.auth;
+  const ui   = window.Numerastra && window.Numerastra.ui;
+  if (!api || !auth || !auth.isLoggedIn()) {
+    window.location.href = '/pages/login.html?redirect=%2Fpages%2Fresults.html';
+    return;
+  }
+
+  const question = document.getElementById('ai-question').value.trim();
+  if (!question) {
+    ui && ui.toast('Please enter a question', 'warning');
+    return;
+  }
+  if (question.length < 10) {
+    ui && ui.toast('Question is too short — give me more to work with', 'warning');
+    return;
+  }
+
+  const submitBtn = document.getElementById('ai-submit');
+  const answerSlot = document.getElementById('ai-answer');
+  const answerText = document.getElementById('ai-answer-text');
+  const upgradeCta = document.getElementById('ai-upgrade-cta');
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Thinking...';
+  answerSlot.style.display = 'none';
+  upgradeCta.style.display = 'none';
+
+  // Build context from saved calc
+  const calc = NumerastraEngine && NumerastraEngine.loadCalculation ? NumerastraEngine.loadCalculation() : null;
+  const context = calc ? { name: calc.name, dob: calc.dob } : {};
+
+  try {
+    const result = await api.askAI(question, context);
+    answerText.textContent = result.answer || result.response || result.text || JSON.stringify(result);
+    answerSlot.style.display = 'block';
+
+    // Update user's freeQuestionsUsed if tier is free — refetch /me
+    if (auth.currentUser()?.tier === 'free') {
+      try {
+        const me = await api.me();
+        const a = auth.get();
+        if (a) { a.user = me; auth.set(a); }
+      } catch { /* ignore */ }
+    }
+
+    ui && ui.toast('Guidance received ✨', 'success');
+    document.getElementById('ai-question').value = '';
+    document.getElementById('ai-char-count').textContent = '0';
+  } catch (e) {
+    if (e.status === 402 || (e.message && e.message.toLowerCase().includes('quota'))) {
+      upgradeCta.style.display = 'block';
+      ui && ui.toast('You\'ve used your free questions', 'warning');
+    } else if (e.status === 429) {
+      ui && ui.toast('Slow down — too many requests', 'warning');
+    } else {
+      ui && ui.toast(e.message || 'Could not get guidance', 'error');
+    }
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Ask ✧';
+  }
+}
+
+initResults();
+</script>
+
+</body>
+</html>

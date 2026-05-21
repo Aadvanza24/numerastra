@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — Numerastra</title>
+<meta name="description" content="Sign in to Numerastra with your mobile number. Secure OTP-based authentication, no passwords to remember.">
+<link rel="canonical" href="https://numerastra.com/pages/login.html">
+
+<!-- ANALYTICS BLOCK START -- DO NOT EDIT THE COMMENT MARKERS -->
+
+<!-- Search engine verification (replace YOUR-VERIFICATION-CODE-HERE with actual codes) -->
+<meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
+<meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE-HERE">
+<!-- Optional: Yandex (large in India for non-Hindi-English users) -->
+<!-- <meta name="yandex-verification" content="YOUR-YANDEX-VERIFICATION-CODE-HERE"> -->
+
+<!-- Plausible Analytics — privacy-focused, no cookies, GDPR-compliant out of the box -->
+<!-- After signing up at plausible.io, set domain in your dashboard, then this loads automatically -->
+<script defer data-domain="numerastra.com" src="https://plausible.io/js/script.js"></script>
+<!-- Optional: outbound link clicks + 404 tracking + file download tracking -->
+<!-- Replace the line above with this if you want richer tracking: -->
+<!-- <script defer data-domain="numerastra.com" src="https://plausible.io/js/script.outbound-links.hash.file-downloads.js"></script> -->
+
+<!-- ANALYTICS BLOCK END -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sign in">
+<meta property="og:description" content="Sign in to Numerastra with your mobile number. Secure OTP-based authentication, no passwords to remember.">
+<meta property="og:url" content="https://numerastra.com/pages/login.html">
+<meta property="og:image" content="https://numerastra.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sign in">
+<meta name="twitter:description" content="Sign in to Numerastra with your mobile number. Secure OTP-based authentication, no passwords to remember.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<style>
+.auth-shell { max-width: 460px; margin: 80px auto; padding: 0 20px; }
+.auth-card { background: var(--ink2); border: 0.5px solid var(--border); border-radius: var(--r-xl); padding: 44px 36px; position: relative; overflow: hidden; }
+.auth-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.auth-eye { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 14px; }
+.auth-h { font-family: 'Crimson Text', serif; font-size: 32px; color: var(--text); text-align: center; line-height: 1.15; margin-bottom: 10px; font-weight: 600; }
+.auth-h em { color: var(--gold); font-style: italic; }
+.auth-desc { font-size: 14px; color: var(--muted); text-align: center; line-height: 1.65; margin-bottom: 28px; }
+
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 7px; }
+.field input { width: 100%; background: var(--ink3); border: 0.5px solid var(--border); border-radius: var(--r-sm); color: var(--text); font-family: inherit; font-size: 16px; padding: 14px 16px; outline: none; transition: border-color .18s, box-shadow .18s; }
+.field input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-faint); }
+
+.mobile-input { display: grid; grid-template-columns: 80px 1fr; gap: 10px; }
+.country-code { background: var(--ink3); border: 0.5px solid var(--border); border-radius: var(--r-sm); color: var(--text); font-size: 16px; padding: 14px 12px; text-align: center; }
+
+.otp-input { letter-spacing: .35em; font-family: 'DM Mono', monospace; text-align: center; font-size: 22px; }
+
+.auth-btn { width: 100%; background: var(--gold); color: var(--ink); border: none; padding: 14px; border-radius: var(--r-md); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: .04em; transition: opacity .18s; }
+.auth-btn:hover { opacity: .9; }
+.auth-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.auth-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); cursor: pointer; margin-bottom: 16px; padding: 6px 0; transition: color .18s; background: none; border: none; font-family: inherit; }
+.auth-back:hover { color: var(--gold); }
+
+.resend { text-align: center; margin-top: 18px; font-size: 13px; color: var(--muted); }
+.resend button { background: none; border: none; color: var(--gold); font-family: inherit; font-size: 13px; cursor: pointer; padding: 0; }
+.resend button:disabled { color: var(--faint); cursor: not-allowed; }
+
+.auth-foot { text-align: center; margin-top: 24px; font-size: 12px; color: var(--muted); line-height: 1.7; }
+.auth-foot a { color: var(--gold-l); text-decoration: underline; }
+
+.error-msg { background: rgba(232,75,74,0.1); border: 0.5px solid rgba(232,75,74,0.3); border-radius: var(--r-sm); color: #F09595; font-size: 13px; padding: 10px 14px; margin-bottom: 16px; display: none; }
+.error-msg.show { display: block; }
+
+.benefits { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 0.5px solid var(--border); }
+.benefit { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text); line-height: 1.55; }
+.benefit-icon { color: var(--teal); flex-shrink: 0; margin-top: 1px; }
+
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+  <nav class="site-nav">
+    <a href="../index.html#calculator">Calculator</a>
+    <a href="numerology.html">Numerology</a>
+    <a href="angel-numbers.html">Angel Numbers</a>
+    <a href="blog.html">Blog</a>
+    <a href="/pages/remedies.html">Remedies</a>
+        <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a href="login.html" class="header-cta active">Sign in</a>
+</header>
+
+<main>
+
+<section class="auth-shell">
+  <div class="auth-card">
+
+    <div id="step-mobile">
+      <div class="auth-eye">Sign in or create account</div>
+      <h1 class="auth-h">Welcome to<br><em>Numerastra</em></h1>
+      <p class="auth-desc">Enter your mobile number to continue. We'll send you a one-time code — no passwords to remember.</p>
+
+      <div class="error-msg" id="err-1"></div>
+
+      <div class="field">
+        <label for="mobile">Mobile number</label>
+        <div class="mobile-input">
+          <div class="country-code">+91</div>
+          <input id="mobile" type="tel" placeholder="9876543210" autocomplete="tel" maxlength="10" autofocus>
+        </div>
+      </div>
+
+      <button class="auth-btn" id="btn-send" onclick="sendOTP()" disabled>Send OTP</button>
+
+      <div class="auth-foot">By continuing you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a></div>
+
+      <div class="benefits">
+        <div class="benefit"><span class="benefit-icon">✓</span><span>Free reading instantly — no card required</span></div>
+        <div class="benefit"><span class="benefit-icon">✓</span><span>Mobile OTP — secure, no password to remember</span></div>
+        <div class="benefit"><span class="benefit-icon">✓</span><span>Save your readings, compare across family</span></div>
+      </div>
+    </div>
+
+    <div id="step-otp" class="hidden">
+      <button class="auth-back" onclick="backToMobile()">← Change number</button>
+
+      <div class="auth-eye">Verify your mobile</div>
+      <h2 class="auth-h">Enter the<br><em>6-digit code</em></h2>
+      <p class="auth-desc">We sent a verification code to <strong style="color:var(--text)" id="masked-mobile">+91 XXXXX 43210</strong>. Code expires in 10 minutes.</p>
+
+      <div class="error-msg" id="err-2"></div>
+
+      <div class="field">
+        <label for="otp">Verification code</label>
+        <input id="otp" class="otp-input" type="text" placeholder="000000" maxlength="6" inputmode="numeric" autocomplete="one-time-code">
+      </div>
+
+      <button class="auth-btn" id="btn-verify" onclick="verifyOTP()" disabled>Verify and continue</button>
+
+      <div class="resend">
+        Didn't receive the code? <button id="btn-resend" onclick="resendOTP()" disabled>Resend in <span id="cd">60</span>s</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">N</div><div class="logo-text">Numer<span>astra</span></div></a>
+      <p>Ancient numerology for the modern world.</p>
+    </div>
+    <div class="footer-col"><h4>Tools</h4><ul>
+      <li><a href="../index.html#calculator">Calculator</a></li>
+      <li><a href="angel-numbers.html">Angel numbers</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Account</h4><ul>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Numerastra</span></div>
+</footer>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/engine.js"></script>
+
+<script>
+let mobileVal = '';
+let cooldownTimer = null;
+
+const inpMobile = document.getElementById('mobile');
+const inpOtp    = document.getElementById('otp');
+const btnSend   = document.getElementById('btn-send');
+const btnVerify = document.getElementById('btn-verify');
+const btnResend = document.getElementById('btn-resend');
+
+inpMobile.addEventListener('input', e => {
+  e.target.value = e.target.value.replace(/\D/g, '');
+  btnSend.disabled = e.target.value.length !== 10 || !/^[6-9]/.test(e.target.value);
+});
+inpMobile.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !btnSend.disabled) sendOTP();
+});
+
+inpOtp.addEventListener('input', e => {
+  e.target.value = e.target.value.replace(/\D/g, '');
+  btnVerify.disabled = e.target.value.length !== 6;
+});
+inpOtp.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !btnVerify.disabled) verifyOTP();
+});
+
+function showError(stepId, msg) {
+  const el = document.getElementById(stepId);
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 6000);
+}
+
+async function sendOTP() {
+  mobileVal = inpMobile.value;
+  btnSend.disabled = true;
+  btnSend.textContent = 'Sending...';
+
+  try {
+    const data = await Numerastra.api.sendOTP(mobileVal);
+    document.getElementById('masked-mobile').textContent = data.maskedMobile || `+91 XXXXX${mobileVal.slice(-5)}`;
+    document.getElementById('step-mobile').classList.add('hidden');
+    document.getElementById('step-otp').classList.remove('hidden');
+    setTimeout(() => inpOtp.focus(), 100);
+    startCooldown();
+    Numerastra.ui.toast('Code sent to ' + (data.maskedMobile || 'your mobile'), 'success');
+  } catch (e) {
+    showError('err-1', e.message);
+    btnSend.disabled = false;
+    btnSend.textContent = 'Send OTP';
+  }
+}
+
+async function verifyOTP() {
+  const otp = inpOtp.value;
+  btnVerify.disabled = true;
+  btnVerify.textContent = 'Verifying...';
+
+  try {
+    const result = await Numerastra.auth.login(mobileVal, otp);
+
+    Numerastra.ui.toast(result.isNewUser ? 'Welcome to Numerastra ✨' : 'Welcome back', 'success');
+
+    // Redirect — check plan param for checkout, else intent, else home
+    const params = new URLSearchParams(location.search);
+    const plan = params.get('plan') || params.get('intent');
+    if (plan === 'pro' || plan === 'pro_monthly' || plan === 'pro_annual' || plan === 'basic_report') {
+      setTimeout(() => { location.href = `/pages/pricing.html?plan=${plan}&action=checkout`; }, 600);
+    } else {
+      const redirect = params.get('redirect') || '/pages/results.html';
+      setTimeout(() => { location.href = redirect; }, 600);
+    }
+  } catch (e) {
+    showError('err-2', e.message);
+    btnVerify.disabled = false;
+    btnVerify.textContent = 'Verify and continue';
+  }
+}
+
+function backToMobile() {
+  document.getElementById('step-otp').classList.add('hidden');
+  document.getElementById('step-mobile').classList.remove('hidden');
+  if (cooldownTimer) clearInterval(cooldownTimer);
+}
+
+async function resendOTP() {
+  if (btnResend.disabled) return;
+  btnResend.disabled = true;
+  await sendOTP();
+  document.getElementById('step-mobile').classList.add('hidden');
+  document.getElementById('step-otp').classList.remove('hidden');
+  startCooldown();
+}
+
+function startCooldown() {
+  let s = 60;
+  btnResend.disabled = true;
+  btnResend.innerHTML = `Resend in <span id="cd">${s}</span>s`;
+  if (cooldownTimer) clearInterval(cooldownTimer);
+  cooldownTimer = setInterval(() => {
+    s--;
+    if (s <= 0) {
+      clearInterval(cooldownTimer);
+      btnResend.disabled = false;
+      btnResend.innerHTML = 'Resend code';
+    } else {
+      btnResend.innerHTML = `Resend in <span id="cd">${s}</span>s`;
+    }
+  }, 1000);
+}
+
+// If user is already logged in, skip the form
+if (Numerastra.auth.isLoggedIn()) {
+  const params = new URLSearchParams(location.search);
+  const plan = params.get('plan') || params.get('intent');
+  if (plan) {
+    location.href = `/pages/pricing.html?plan=${plan}&action=checkout`;
+  } else {
+    const redirect = params.get('redirect') || '/pages/results.html';
+    location.href = redirect;
+  }
+}
+</script>
+</body>
+</html>
