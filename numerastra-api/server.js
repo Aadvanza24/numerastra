@@ -16,15 +16,19 @@ const stripeRoutes  = require('./src/routes/stripe');
 const { checkConnection } = require('./src/services/db');
 
 const app  = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // ─── SECURITY ─────────────────────────────────────────────────────────
 app.use(helmet());
 app.disable('x-powered-by');
 
 // ─── CORS ─────────────────────────────────────────────────────────────
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000')
-  .split(',').map(o => o.trim());
+const allowedOrigins = (
+  process.env.ALLOWED_ORIGINS ||
+  'http://localhost:3000,http://localhost:5500,https://thenumerastra.com'
+)
+.split(',')
+.map(o => o.trim());
 
 app.use(cors({
   origin: (origin, cb) => {
@@ -134,9 +138,8 @@ app.use((error, req, res, _next) => {
 });
 
 // ─── START ────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n  Numerology API running`);
-  console.log(`  http://localhost:${PORT}\n`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app;

@@ -20,7 +20,7 @@ const router = express.Router();
 const otpSendLimiter = rateLimit({
   windowMs: 10 * 60 * 1000,
   max: 5,
-  keyGenerator: req => req.ip,
+  //keyGenerator: req => req.ip,
   message: { success: false, error: 'Too many OTP requests from this device. Try again in 10 minutes.' },
 });
 
@@ -28,7 +28,7 @@ const otpSendLimiter = rateLimit({
 const otpVerifyLimiter = rateLimit({
   windowMs: 10 * 60 * 1000,
   max: 10,
-  keyGenerator: req => req.ip,
+  //keyGenerator: req => req.ip,
   message: { success: false, error: 'Too many verification attempts. Try again in 10 minutes.' },
 });
 
@@ -59,7 +59,7 @@ const vEmail = body('email')
  * POST /api/auth/otp/send
  * Request an OTP for a mobile number.
  *
- * Body: { mobile: "9876543210" }
+ * Body: { mobile: "+919038303115" }
  * Returns: { expiresAt, maskedMobile }
  */
 router.post('/otp/send',
@@ -87,7 +87,8 @@ router.post('/otp/send',
         ttlSeconds: 600,
       });
     } catch (e) {
-      err(res, e.message, 400);
+  console.error('[OTP SEND ERROR]', e);
+  err(res, e.message || 'OTP failed', 400);
     }
   }
 );

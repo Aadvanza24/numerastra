@@ -1,7 +1,7 @@
 'use strict';
 
 const { Pool } = require('pg');
-
+console.log('[DB URL]', process.env.DATABASE_URL);
 if (!process.env.DATABASE_URL) {
   if (process.env.NODE_ENV === 'production') {
     throw new Error('DATABASE_URL must be set in production.');
