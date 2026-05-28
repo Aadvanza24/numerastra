@@ -17,6 +17,8 @@ const { checkConnection } = require('./src/services/db');
 
 const app  = express();
 const PORT = process.env.PORT || 8080;
+console.log("SERVER STARTING...");
+
 
 // ─── SECURITY ─────────────────────────────────────────────────────────
 app.use(helmet());
@@ -136,10 +138,11 @@ app.use((error, req, res, _next) => {
     error: process.env.NODE_ENV === 'production' ? 'Internal server error' : error.message,
   });
 });
-
+console.log("BEFORE LISTEN");
 // ─── START ────────────────────────────────────────────────────────────
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`RUNNING ON PORT ${PORT}`);
 });
 
 module.exports = app;
