@@ -9,11 +9,11 @@ const morgan       = require('morgan');
 const compression  = require('compression');
 const rateLimit    = require('express-rate-limit');
 
-//const routes        = require('./src/routes/index');
-//const authRoutes    = require('./src/routes/auth');
-//const razorpayRoutes = require('./src/routes/razorpay');
-//const stripeRoutes  = require('./src/routes/stripe');
-//const { checkConnection } = require('./src/services/db');
+const routes        = require('./src/routes/index');
+const authRoutes    = require('./src/routes/auth');
+const razorpayRoutes = require('./src/routes/razorpay');
+const stripeRoutes  = require('./src/routes/stripe');
+const { checkConnection } = require('./src/services/db');
 
 const app  = express();
 const PORT = process.env.PORT || 8080;
@@ -45,8 +45,8 @@ app.use(cors({
 // ─── WEBHOOK ROUTES (raw body — MUST be before express.json()) ────────
 // Stripe and Razorpay verify signatures against the raw request body.
 // These routes handle their own body parsing internally.
-//app.use('/api/payments/razorpay/webhook', razorpayRoutes);
-//app.use('/api/payments/stripe/webhook',   stripeRoutes);
+app.use('/api/payments/razorpay/webhook', razorpayRoutes);
+app.use('/api/payments/stripe/webhook',   stripeRoutes);
 
 // ─── COMPRESSION & PARSING ────────────────────────────────────────────
 app.use(compression());
@@ -80,20 +80,20 @@ app.use('/api/astro', calcLimiter);
 app.use('/api/auspicious/find', calcLimiter);
 
 // ─── ROUTES ───────────────────────────────────────────────────────────
-//app.use('/api/auth',               authRoutes);
-//app.use('/api/payments/razorpay',  razorpayRoutes);
-//app.use('/api/payments/stripe',    stripeRoutes);
-//app.use('/api',                    routes);
+app.use('/api/auth',               authRoutes);
+app.use('/api/payments/razorpay',  razorpayRoutes);
+app.use('/api/payments/stripe',    stripeRoutes);
+app.use('/api',                    routes);
 
 // ─── DB HEALTH CHECK ──────────────────────────────────────────────────
-//app.get('/api/health/db', async (req, res) => {
-  //try {
-  //  const ts = await checkConnection();
-   // res.json({ db: 'connected', serverTime: ts });
-  //} catch (e) {
-  //  res.status(503).json({ db: 'error', error: e.message });
-  //}
-//});
+app.get('/api/health/db', async (req, res) => {
+  try {
+    const ts = await checkConnection();
+    res.json({ db: 'connected', serverTime: ts });
+  } catch (e) {
+    res.status(503).json({ db: 'error', error: e.message });
+  }
+});
 
 // Also add PATCH to CORS allowed methods
 
