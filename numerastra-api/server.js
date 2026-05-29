@@ -16,6 +16,7 @@ const stripeRoutes  = require('./src/routes/stripe');
 const { checkConnection } = require('./src/services/db');
 
 const app  = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 8080;
 console.log("SERVER STARTING...");
 

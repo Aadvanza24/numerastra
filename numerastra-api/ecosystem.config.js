@@ -10,8 +10,7 @@ module.exports = {
       // ── App identity ──────────────────────────────────────────────
       name:        'numerastra-api',
       script:      'server.js',
-      cwd:         '/var/www/numerastra/api',
-
+      cwd:         './',
       // ── Instances ─────────────────────────────────────────────────
       // 'max' uses all CPU cores. Start with 2 on KVM 1, 'max' on KVM 2+
       instances:   2,
@@ -74,9 +73,9 @@ module.exports = {
         // DATABASE_URL: 'mysql://USER:PASSWORD@localhost:3306/numerastra',
 
         // ── App config ────────────────────────────────────────────
-        APP_URL:              'https://numerastra.com',
+        APP_URL:              'https://thenumerastra.com',
         INTERNAL_API_SECRET:  'REPLACE_WITH_INTERNAL_SECRET',
-        ALLOWED_ORIGINS:      'https://numerastra.com,https://www.numerastra.com',
+        ALLOWED_ORIGINS:      'https://thenumerastra.com,https://www.thenumerastra.com',
         RATE_LIMIT_WINDOW_MS: '900000',
       },
 
@@ -86,7 +85,7 @@ module.exports = {
         PORT:         3000,
         USE_MOCK_SMS: 'true',
         JWT_SECRET:   'dev-secret-not-for-production-use',
-        ALLOWED_ORIGINS: 'http://localhost:3000,http://localhost:5173',
+        ALLOWED_ORIGINS: 'http://localhost:8080,http://localhost:5500',
       },
     },
   ],
